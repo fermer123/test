@@ -32,12 +32,6 @@
 }
 .call {
   margin-right: 10px;
-}
-
-.basket {
-  margin-left: 67px;
-}
-a {
   text-decoration: none;
   font-style: normal;
   font-weight: 400;
@@ -45,4 +39,22 @@ a {
   line-height: 140%;
   letter-spacing: 0.02em;
   color: #000000;
+}
+
+.cart {
+  margin-left: 67px;
+}
+.header_link {
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: #000000;
+  &:active,
+  &:hover,
+  &:focus {
+    color: #6e9c9f;
+  }
 }

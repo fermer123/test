@@ -14,25 +14,36 @@ const Header = () => {
         </div>
         <ul className={style.list}>
           <li>
-            <NavLink to='/home'>Главная</NavLink>
+            <NavLink className={style.header_link} to='/'>
+              Главная
+            </NavLink>
           </li>
           <li>
-            <NavLink to='/shop'>Магазин</NavLink>
+            <NavLink className={style.header_link} to='/shop'>
+              Магазин
+            </NavLink>
           </li>
           <li>
-            <NavLink to='/brands'>О бренде</NavLink>
+            <NavLink className={style.header_link} to='/brands'>
+              О бренде
+            </NavLink>
           </li>
           <li>
-            <NavLink to='/contact'>Контакты</NavLink>
+            <NavLink className={style.header_link} to='/contact'>
+              Контакты
+            </NavLink>
           </li>
         </ul>
         <div>
-          <NavLink to='/call'>
-            <img className={style.call} src={call} />
+          <a className={style.call} href='tel:+7 (495) 823-54-12'>
+            <img className={style.header_link} src={call} />
             +7 (495) 823-54-12
-          </NavLink>
-          <NavLink to='/basket'>
-            <img className={style.basket} src={basket} />
+          </a>
+          <NavLink to='/cart'>
+            <img
+              className={style.cart + ' ' + style.header_link}
+              src={basket}
+            />
           </NavLink>
         </div>
       </div>
