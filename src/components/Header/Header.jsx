@@ -3,8 +3,10 @@ import { NavLink } from 'react-router-dom';
 import Logo from '../img/Logo.svg';
 import call from '../img/call.svg';
 import basket from '../img/basket.svg';
+import { useTranslation } from 'react-i18next';
 
 const Header = () => {
+  const { t } = useTranslation();
   return (
     <div className='container'>
       <div className={style.header}>
@@ -15,22 +17,22 @@ const Header = () => {
         <ul className={style.list}>
           <li>
             <NavLink className={style.header_link} to='/'>
-              Главная
+              {t('header.link1')}
             </NavLink>
           </li>
           <li>
             <NavLink className={style.header_link} to='/shop'>
-              Магазин
+              {t('header.link2')}
             </NavLink>
           </li>
           <li>
             <NavLink className={style.header_link} to='/brands'>
-              О бренде
+              {t('header.link3')}
             </NavLink>
           </li>
           <li>
             <NavLink className={style.header_link} to='/contact'>
-              Контакты
+              {t('header.link4')}
             </NavLink>
           </li>
         </ul>

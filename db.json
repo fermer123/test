@@ -1,0 +1,23 @@
+{
+  "users": [],
+  "closets": [
+    {
+      "id": 1,
+      "title": "Футболка USA",
+      "price": 229,
+      "image": "",
+      "category": "t-shirt",
+      "size": ["s", "m", "l", "xl"],
+      "color": ["green", "black"]
+    },
+    {
+      "id": 2,
+      "title": "Футболка KG",
+      "price": 29,
+      "image": "",
+      "category": "t-shirt",
+      "size": ["s", "m", "l", "xl"],
+      "color": ["green", "black", "white"]
+    }
+  ]
+}
