@@ -4,7 +4,11 @@ import style from './Home.module.scss';
 const Home = () => {
   const { t } = useTranslation();
 
-  return <div>{t('home.firstScreen.title')}</div>;
+  return (
+    <div>
+      <h1 dangerouslySetInnerHTML={{ __html: t('home.firstScreen.title') }} />
+    </div>
+  );
 };
 
 export default Home;
