@@ -18,6 +18,15 @@
       "category": "t-shirt",
       "size": ["s", "m", "l", "xl"],
       "color": ["green", "black", "white"]
+    },
+    {
+      "id": 3,
+      "title": "Футболка RU",
+      "price": 229,
+      "image": "",
+      "category": "t-shirt",
+      "size": ["s", "m", "l", "xl"],
+      "color": ["green", "black"]
     }
   ]
 }

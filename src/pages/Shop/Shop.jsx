@@ -1,7 +1,7 @@
 import style from './Shop.module.scss';
 
 const Shop = () => {
-  return <div>Shop</div>;
+  return <div className='container'>Shop</div>;
 };
 
 export default Shop;
