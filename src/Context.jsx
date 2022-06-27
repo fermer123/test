@@ -5,7 +5,7 @@ const { createContext } = require('react');
 export const CustomContext = createContext();
 
 export const Context = ({ children }) => {
-  const [count, setCount] = useState(1);
+  const [count, setCount] = useState('nothing');
   const [user, setUser] = useState({
     id: 1,
     name: 'Igor',
@@ -20,7 +20,8 @@ export const Context = ({ children }) => {
 
   return (
     <CustomContext.Provider value={value}>
-      {children} //app
+      {children}
+      {/* App*/}
     </CustomContext.Provider>
   );
 };
