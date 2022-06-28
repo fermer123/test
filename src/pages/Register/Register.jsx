@@ -1,44 +1,38 @@
 import style from './Register.module.scss';
 import { NavLink } from 'react-router-dom';
 import axios from 'axios';
+import { useForm } from 'react-hook-form';
 
 const Register = () => {
-  const registerUser = (e) => {
-    e.preventDefault();
-    const resp = axios.post('http://localhost:8080/register');
-    console.log(resp);
-  };
+  const {
+    register,
+    handleSubmit,
+    setError: { errors },
+    reset,
+  } = useForm();
 
+  const onSubmit = (data) => console.log(data);
   return (
     <div className='container'>
       <div className={style.register}></div>
-      <form onSubmit={registerUser}>
+      <form onSubmit={handleSubmit(onSubmit)}>
         <h2 className={style.register_h2}>Register</h2>
         <div className={style.register_list}>
           <input
             className={style.input}
-            name='email'
+            {...register('email', {
+              required: 'заполни поле',
+            })}
             type='email'
             placeholder='email'
           />
+          <span>{errors?.email && errors.email.message}</span>
+          <input className={style.input} type='login' placeholder='login' />
+
+          <input className={style.input} type='tel' placeholder='telephone' />
 
           <input
             className={style.input}
-            name='login'
-            type='login'
-            placeholder='login'
-          />
-
-          <input
-            className={style.input}
-            name='tel'
-            type='tel'
-            placeholder='telephone'
-          />
-
-          <input
-            className={style.input}
-            name='password'
             type='password'
             placeholder='password'
           />
