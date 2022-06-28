@@ -6,15 +6,29 @@ const Login = () => {
     <div className='container'>
       <div className={style.login}></div>
       <form>
-        <h2>Login</h2>
-        <input required type='email' placeholder='email' />
-        <br />
-        <input required type='password' placeholder='password' />
-        <br />
-        <button type='submit'>sing in</button>
+        <h2 className={style.login_h2}>Login</h2>
+        <div className={style.login_list}>
+          <input
+            className={style.input}
+            required
+            type='email'
+            placeholder='email'
+          />
+          <br />
+          <input
+            className={style.input}
+            required
+            type='password'
+            placeholder='password'
+          />
+          <br />
+        </div>
+        <button className={style.btn} type='submit'>
+          sign in
+        </button>
         <p>
           <NavLink className={style.header_link} to='/register'>
-            Зарегестрироваться?
+            register?
           </NavLink>
         </p>
       </form>

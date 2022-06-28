@@ -1,14 +1,61 @@
 .header_link {
   text-decoration: none;
+  font-size: 18px;
+  background-color: #6e9c9f;
+  border: none;
+  border-radius: 20px;
+  color: #000000;
+  display: inline-block;
+  margin-top: 10px;
+  margin-bottom: 50px;
+  padding: 10px 40px;
+  margin-left: 50%;
+  transform: translateX(-50%);
   font-style: normal;
   font-weight: 400;
-  font-size: 15px;
-  line-height: 140%;
-  letter-spacing: 0.02em;
-  color: #000000;
-  &:active,
-  &:hover,
-  &:focus {
-    color: #6e9c9f;
+}
+.login_list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.input {
+  width: 300px;
+  margin: 0 auto;
+  height: 40px;
+  border-radius: 20px;
+  border: 1px solid #6e9c9f;
+  padding: 5px 10px;
+  font-size: 18px;
+  text-align: center;
+  &::placeholder {
+    text-align: center;
   }
+  &:focus {
+    border: 1px solid #6e9c9f;
+    outline: none;
+  }
+}
+
+.login_h2 {
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  color: #6e9c9f;
+}
+
+.btn {
+  color: #000000;
+  padding: 10px 40px;
+  background-color: #6e9c9f;
+  font-style: normal;
+  font-weight: 400;
+  border: none;
+  font-size: 18px;
+  border-radius: 20px;
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
 }
