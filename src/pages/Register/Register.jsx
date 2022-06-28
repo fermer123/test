@@ -13,23 +13,48 @@ const Register = () => {
     <div className='container'>
       <div className={style.register}></div>
       <form onSubmit={registerUser}>
-        <h2>Register</h2>
-        <input name='email' type='email' placeholder='email' />
-        <br />
-        <input name='login' type='login' placeholder='login' />
-        <br />
-        <input name='tel' type='tel' placeholder='telephone' />
-        <br />
-        <input name='password' type='password' placeholder='password' />
-        <br />
-        <input type='password' placeholder='repeat password' />
-        <br />
-        <button type='submit'>sing in</button>
-        <p>
-          <NavLink className={style.header_link} to='/login'>
-            Войти?
-          </NavLink>
-        </p>
+        <h2 className={style.register_h2}>Register</h2>
+        <div className={style.register_list}>
+          <input
+            className={style.input}
+            name='email'
+            type='email'
+            placeholder='email'
+          />
+
+          <input
+            className={style.input}
+            name='login'
+            type='login'
+            placeholder='login'
+          />
+
+          <input
+            className={style.input}
+            name='tel'
+            type='tel'
+            placeholder='telephone'
+          />
+
+          <input
+            className={style.input}
+            name='password'
+            type='password'
+            placeholder='password'
+          />
+
+          <input
+            className={style.input}
+            type='password'
+            placeholder='repeat password'
+          />
+        </div>
+        <button className={style.btn} type='submit'>
+          sign in
+        </button>
+        <NavLink className={style.header_link} to='/login'>
+          login?
+        </NavLink>
       </form>
     </div>
   );
