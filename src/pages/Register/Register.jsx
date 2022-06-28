@@ -11,11 +11,18 @@ const Register = () => {
     reset,
   } = useForm();
 
-  const onSubmit = (data) => console.log(data);
+  const Register = (data) => {
+    console.log(data);
+    const resp = axios.post('http://localhost:8080/register', {
+      ...data,
+      orders: [],
+    });
+    console.log(resp);
+  };
   return (
     <div className='container'>
       <div className={style.register}></div>
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form onSubmit={handleSubmit(Register)}>
         <h2 className={style.register_h2}>Register</h2>
         <div className={style.register_list}>
           <input
@@ -27,17 +34,37 @@ const Register = () => {
             placeholder='email'
           />
           <span>{errors?.email && errors.email.message}</span>
-          <input className={style.input} type='login' placeholder='login' />
-
-          <input className={style.input} type='tel' placeholder='telephone' />
+          <input
+            {...register('login', {
+              required: 'заполни поле',
+            })}
+            className={style.input}
+            type='login'
+            placeholder='login'
+          />
 
           <input
+            {...register('phone', {
+              required: 'заполни поле',
+            })}
+            className={style.input}
+            type='phone'
+            placeholder='telephone'
+          />
+
+          <input
+            {...register('password', {
+              required: 'заполни поле',
+            })}
             className={style.input}
             type='password'
             placeholder='password'
           />
 
           <input
+            {...register('password', {
+              required: 'заполни поле',
+            })}
             className={style.input}
             type='password'
             placeholder='repeat password'
