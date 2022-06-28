@@ -5,8 +5,10 @@ import style from './Home.module.scss';
 
 const Home = () => {
   const { t } = useTranslation();
-  const { count, user } = useContext(CustomContext);
-  console.log(user, count);
+  const { count, user, setUser } = useContext(CustomContext);
+
+  console.log(user.name);
+
   return (
     <div className='container'>
       <div dangerouslySetInnerHTML={{ __html: t('home.firstScreen.title') }} />

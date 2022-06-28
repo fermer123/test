@@ -47,6 +47,12 @@ const Header = () => {
               src={basket}
             />
           </NavLink>
+          <NavLink
+            className={style.login + ' ' + style.header_link}
+            to='/login'
+          >
+            Login
+          </NavLink>
         </div>
       </div>
     </div>

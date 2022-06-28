@@ -1,0 +1,14 @@
+.header_link {
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: #000000;
+  &:active,
+  &:hover,
+  &:focus {
+    color: #6e9c9f;
+  }
+}
