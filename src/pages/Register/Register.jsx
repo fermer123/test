@@ -13,11 +13,11 @@ const Register = () => {
 
   const Register = (data) => {
     console.log(data);
-    const resp = axios.post('http://localhost:8080/register', {
-      ...data,
-      orders: [],
-    });
-    console.log(resp);
+    // const resp = axios.post('http://localhost:8080/register', {
+    //   ...data,
+    //   orders: [],
+    // });
+    // console.log(resp);
   };
   return (
     <div className='container'>
