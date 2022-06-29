@@ -1,14 +1,30 @@
 {
-  "users": [],
-  "closets": [
+  "users": [
+    {
+      "email": "qwe@mail.ru",
+      "password": "$2a$10$HEg7GfSlWSo9zp3EH3QHwOCJ2ZA7MNCDt/iVVgn335Qjnrcu/EObm",
+      "login": "qwe",
+      "phone": "1234555123123",
+      "id": 1
+    }
+  ],
+  "clothes": [
     {
       "id": 1,
       "title": "Футболка USA",
       "price": 229,
       "image": "",
       "category": "t-shirt",
-      "size": ["s", "m", "l", "xl"],
-      "color": ["green", "black"]
+      "size": [
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "color": [
+        "green",
+        "black"
+      ]
     },
     {
       "id": 2,
@@ -16,8 +32,17 @@
       "price": 29,
       "image": "",
       "category": "t-shirt",
-      "size": ["s", "m", "l", "xl"],
-      "color": ["green", "black", "white"]
+      "size": [
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "color": [
+        "green",
+        "black",
+        "white"
+      ]
     },
     {
       "id": 3,
@@ -25,8 +50,16 @@
       "price": 229,
       "image": "",
       "category": "t-shirt",
-      "size": ["s", "m", "l", "xl"],
-      "color": ["green", "black"]
+      "size": [
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "color": [
+        "green",
+        "black"
+      ]
     }
   ]
 }

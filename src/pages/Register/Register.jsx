@@ -11,13 +11,11 @@ const Register = () => {
     reset,
   } = useForm();
 
-  const Register = (data) => {
-    console.log(data);
-    // const resp = axios.post('http://localhost:8080/register', {
-    //   ...data,
-    //   orders: [],
-    // });
-    // console.log(resp);
+  const Register = async (data) => {
+    const resp = await axios.post('http://localhost:8080/register', {
+      ...data,
+    });
+    console.log(resp);
   };
   return (
     <div className='container'>
