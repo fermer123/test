@@ -7,9 +7,7 @@ export const CustomContext = createContext();
 export const Context = ({ children }) => {
   const [count, setCount] = useState('nothing');
   const [user, setUser] = useState({
-    id: 1,
-    name: 'Igor',
-    email: 'Igor@mail.ru',
+    login: '',
   });
   const value = {
     count,

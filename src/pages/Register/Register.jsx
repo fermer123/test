@@ -15,7 +15,7 @@ const Register = () => {
     const resp = await axios.post('http://localhost:8080/register', {
       ...data,
     });
-    console.log(resp);
+    console.log(...resp);
   };
   return (
     <div className='container'>

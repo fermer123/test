@@ -15,16 +15,8 @@
       "price": 229,
       "image": "",
       "category": "t-shirt",
-      "size": [
-        "s",
-        "m",
-        "l",
-        "xl"
-      ],
-      "color": [
-        "green",
-        "black"
-      ]
+      "size": ["s", "m", "l", "xl"],
+      "color": ["green", "black"]
     },
     {
       "id": 2,
@@ -32,17 +24,8 @@
       "price": 29,
       "image": "",
       "category": "t-shirt",
-      "size": [
-        "s",
-        "m",
-        "l",
-        "xl"
-      ],
-      "color": [
-        "green",
-        "black",
-        "white"
-      ]
+      "size": ["s", "m", "l", "xl"],
+      "color": ["green", "black", "white"]
     },
     {
       "id": 3,
@@ -50,16 +33,8 @@
       "price": 229,
       "image": "",
       "category": "t-shirt",
-      "size": [
-        "s",
-        "m",
-        "l",
-        "xl"
-      ],
-      "color": [
-        "green",
-        "black"
-      ]
+      "size": ["s", "m", "l", "xl"],
+      "color": ["green", "black"]
     }
   ]
 }
