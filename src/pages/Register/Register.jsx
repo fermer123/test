@@ -1,9 +1,13 @@
 import style from './Register.module.scss';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { useForm } from 'react-hook-form';
+import { useContext } from 'react';
+import { CustomContext } from '../../Context';
 
 const Register = () => {
+  const push = useNavigate();
+  const { setUser } = useContext(CustomContext);
   const {
     register,
     handleSubmit,
@@ -15,7 +19,9 @@ const Register = () => {
     const resp = await axios.post('http://localhost:8080/register', {
       ...data,
     });
-    console.log(...resp);
+    setUser(resp.data.user);
+    push('/');
+    console.log(resp);
   };
   return (
     <div className='container'>
@@ -31,7 +37,7 @@ const Register = () => {
             type='email'
             placeholder='email'
           />
-          <span>{errors?.email && errors.email.message}</span>
+          {/* <span>{errors?.email && errors.email.message}</span> */}
           <input
             {...register('login', {
               required: 'заполни поле',

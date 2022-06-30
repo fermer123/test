@@ -4,9 +4,14 @@ import Logo from '../img/Logo.svg';
 import call from '../img/call.svg';
 import basket from '../img/basket.svg';
 import { useTranslation } from 'react-i18next';
+import { useContext } from 'react';
+import { CustomContext } from '../../Context';
 
 const Header = () => {
   const { t } = useTranslation();
+  const { user } = useContext(CustomContext);
+  console.log(user);
+  console.log(user);
   return (
     <div className='container'>
       <div className={style.header}>
@@ -47,12 +52,19 @@ const Header = () => {
               src={basket}
             />
           </NavLink>
-          <NavLink
-            className={style.login + ' ' + style.header_link}
-            to='/login'
-          >
-            Login
-          </NavLink>
+
+          {!!user.login ? (
+            <NavLink className={style.login + ' ' + style.header_link} to='/'>
+              logout
+            </NavLink>
+          ) : (
+            <NavLink
+              className={style.login + ' ' + style.header_link}
+              to='/register'
+            >
+              login
+            </NavLink>
+          )}
         </div>
       </div>
     </div>
