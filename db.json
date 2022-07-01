@@ -2,17 +2,10 @@
   "users": [
     {
       "email": "qwe@mail.ru",
-      "password": "$2a$10$HEg7GfSlWSo9zp3EH3QHwOCJ2ZA7MNCDt/iVVgn335Qjnrcu/EObm",
-      "login": "qwe",
-      "phone": "1234555123123",
-      "id": 1
-    },
-    {
-      "email": "123@mail.ru",
-      "password": "$2a$10$hPDAjJd.HHy4VtnD3tLqTOhsZn61osXrhwesFeKTeLso2ifSn4vHm",
+      "password": "$2a$10$Rl4WnQSWCbRZKqGEfRDmbe4r1lnq8V2jNtzu2P9tALp0Z31UFkxLi",
       "login": "qwe",
       "phone": "123123123",
-      "id": 2
+      "id": 1
     }
   ],
   "clothes": [

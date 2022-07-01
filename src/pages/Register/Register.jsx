@@ -1,31 +1,17 @@
 import style from './Register.module.scss';
-import { NavLink, useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import { NavLink } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { useContext } from 'react';
 import { CustomContext } from '../../Context';
 
 const Register = () => {
-  const push = useNavigate();
-  const { setUser } = useContext(CustomContext);
+  const { Register } = useContext(CustomContext);
   const {
     register,
     handleSubmit,
     setError: { errors },
     reset,
   } = useForm();
-
-  const Register = async (data) => {
-    const resp = await axios.post('http://localhost:8080/register', {
-      ...data,
-    });
-    setUser(resp.data.user);
-    localStorage.setItem('user', JSON.stringify(resp.data.user));
-    push('/');
-    console.log(resp);
-  };
-
-  console.log(localStorage);
 
   return (
     <div className='container'>

@@ -1,11 +1,23 @@
 import style from './Login.module.scss';
 import { NavLink } from 'react-router-dom';
+import { useForm } from 'react-hook-form';
+import { useContext } from 'react';
+import { CustomContext } from '../../Context';
 
 const Login = () => {
+  const {
+    register,
+    handleSubmit,
+    setError: { errors },
+    reset,
+  } = useForm();
+
+  const { Login } = useContext(CustomContext);
+
   return (
     <div className='container'>
       <div className={style.login}></div>
-      <form>
+      <form onSubmit={handleSubmit(Login)}>
         <h2 className={style.login_h2}>Login</h2>
         <div className={style.login_list}>
           <input
@@ -13,15 +25,20 @@ const Login = () => {
             required
             type='email'
             placeholder='email'
+            {...register('email', {
+              required: 'заполни поле',
+            })}
           />
-          <br />
+
           <input
             className={style.input}
             required
             type='password'
             placeholder='password'
+            {...register('password', {
+              required: 'заполни поле',
+            })}
           />
-          <br />
         </div>
         <button className={style.btn} type='submit'>
           sign in

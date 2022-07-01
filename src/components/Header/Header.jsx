@@ -9,7 +9,7 @@ import { CustomContext } from '../../Context';
 
 const Header = () => {
   const { t } = useTranslation();
-  const { user } = useContext(CustomContext);
+  const { user, Logout } = useContext(CustomContext);
 
   return (
     <div className='container'>
@@ -53,7 +53,11 @@ const Header = () => {
           </NavLink>
 
           {!!user.login ? (
-            <NavLink className={style.login + ' ' + style.header_link} to='/'>
+            <NavLink
+              className={style.login + ' ' + style.header_link}
+              to='/'
+              onClick={Logout}
+            >
               logout
             </NavLink>
           ) : (
