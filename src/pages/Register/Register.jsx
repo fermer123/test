@@ -20,9 +20,13 @@ const Register = () => {
       ...data,
     });
     setUser(resp.data.user);
+    localStorage.setItem('user', JSON.stringify(resp.data.user));
     push('/');
     console.log(resp);
   };
+
+  console.log(localStorage);
+
   return (
     <div className='container'>
       <div className={style.register}></div>

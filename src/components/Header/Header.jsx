@@ -10,8 +10,7 @@ import { CustomContext } from '../../Context';
 const Header = () => {
   const { t } = useTranslation();
   const { user } = useContext(CustomContext);
-  console.log(user);
-  console.log(user);
+
   return (
     <div className='container'>
       <div className={style.header}>
