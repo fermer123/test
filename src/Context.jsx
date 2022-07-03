@@ -10,9 +10,16 @@ export const Context = ({ children }) => {
   const [user, setUser] = useState({
     login: '',
   });
+  const [shop, setShop] = useState([]);
 
   useEffect(() => {
-    setUser(JSON.parse(localStorage.getItem('user')));
+    if (localStorage.getItem('user') !== null) {
+      setUser(JSON.parse(localStorage.getItem('user')));
+    }
+
+    const clothes = axios
+      .get('http://localhost:8080/clothes')
+      .then(({ data }) => setShop(data));
   }, []);
 
   const Register = async (data) => {
