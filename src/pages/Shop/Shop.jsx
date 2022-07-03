@@ -1,9 +1,12 @@
 import style from './Shop.module.scss';
 import '../../index.scss';
 import { useState } from 'react';
+import { useContext } from 'react';
+import { CustomContext } from '../../Context';
 
 const Shop = () => {
   const [status, setStatus] = useState('all');
+  const { shop } = useContext(CustomContext);
 
   return (
     <div className='container'>
@@ -63,6 +66,8 @@ const Shop = () => {
           </li>
         </ul>
         <p className={style.shop_items_show}>Показано: 9 из 12 товаров</p>
+
+        <div className={style.shop_row}>Collection</div>
       </div>
     </div>
   );

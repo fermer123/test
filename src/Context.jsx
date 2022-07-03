@@ -45,6 +45,7 @@ export const Context = ({ children }) => {
 
   const value = {
     user,
+    shop,
     setUser,
     Register,
     Logout,

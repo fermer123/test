@@ -12,11 +12,11 @@
     {
       "id": 1,
       "title": "Футболка USA",
-      "price": 229,
+      "price": 74,
       "image": "",
       "category": "t-shirt",
       "size": ["s", "m", "l", "xl"],
-      "color": ["green", "black"]
+      "color": ["green", "black", "red"]
     },
     {
       "id": 2,
@@ -25,16 +25,61 @@
       "image": "",
       "category": "t-shirt",
       "size": ["s", "m", "l", "xl"],
-      "color": ["green", "black", "white"]
+      "color": ["green", "black", "white", "red"]
     },
     {
       "id": 3,
       "title": "Футболка RU",
-      "price": 229,
+      "price": 41,
       "image": "",
       "category": "t-shirt",
       "size": ["s", "m", "l", "xl"],
       "color": ["green", "black"]
+    },
+    {
+      "id": 4,
+      "title": "Пальто prada",
+      "price": 419,
+      "image": "",
+      "category": "сoat",
+      "size": ["s", "m", "l", "xl"],
+      "color": ["green", "black", "white", "grey"]
+    },
+    {
+      "id": 5,
+      "title": "Пальто летнее",
+      "price": 209,
+      "image": "",
+      "category": "сoat",
+      "size": ["s", "m", "l", "xl"],
+      "color": ["green", "yellow", "orange"]
+    },
+    {
+      "id": 6,
+      "title": "Пальто утепленное",
+      "price": 121,
+      "image": "",
+      "category": "сoat",
+      "size": ["s", "m", "l", "xl"],
+      "color": ["grey", "brown", "black", "yellow"]
+    },
+    {
+      "id": 7,
+      "title": "Кофта спортивная",
+      "price": 51,
+      "image": "",
+      "category": "sweatshirt",
+      "size": ["s", "m", "l", "xl"],
+      "color": ["brown", "black", "grey"]
+    },
+    {
+      "id": 8,
+      "title": "Кофта pull and bear",
+      "price": 64,
+      "image": "",
+      "category": "sweatshirt",
+      "size": ["s", "m", "l", "xl"],
+      "color": ["black", "white"]
     }
   ]
 }
