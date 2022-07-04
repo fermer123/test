@@ -1,14 +1,17 @@
 import style from './Collection.module.scss';
 
-const Collection = ({ img, title, price, id }) => {
+const Collection = ({ img, title, price, oldPrice, id }) => {
   return (
     <div className='container' id={id}>
       <div className={style.collection}>
-        <div className={style.collection_img}>
-          <img alt={title} src={img} />
-        </div>
+        <img className={style.collection_img} alt={title} src={img} />
         <div className={style.collection_title}>{title}</div>
-        <div className={style.collection_price}>{price}</div>
+        <div>
+          {oldPrice ? (
+            <span className={style.collection_oldPrice}>$ {oldPrice}</span>
+          ) : null}
+          <span className={style.collection_price}>$ {price}</span>
+        </div>
       </div>
     </div>
   );

@@ -74,6 +74,7 @@ const Shop = () => {
               img={`../${e.image}`}
               title={e.title}
               price={e.price}
+              oldPrice={e.oldPrice}
               key={e.id}
             />
           ))}
