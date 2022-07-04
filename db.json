@@ -13,7 +13,7 @@
       "id": 1,
       "title": "Футболка USA",
       "price": 74,
-      "image": "",
+      "image": "./src/components/img/kup.png",
       "category": "t-shirt",
       "size": ["s", "m", "l", "xl"],
       "color": ["green", "black", "red"]

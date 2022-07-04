@@ -3,11 +3,12 @@ import '../../index.scss';
 import { useState } from 'react';
 import { useContext } from 'react';
 import { CustomContext } from '../../Context';
+import Collection from '../Collection/Collection';
 
 const Shop = () => {
   const [status, setStatus] = useState('all');
   const { shop } = useContext(CustomContext);
-
+  console.log(shop);
   return (
     <div className='container'>
       <h2 className='title'>Shop</h2>
@@ -67,7 +68,19 @@ const Shop = () => {
         </ul>
         <p className={style.shop_items_show}>Показано: 9 из 12 товаров</p>
 
-        <div className={style.shop_row}>Collection</div>
+        <div className={style.shop_row}>
+          {shop.map((e) => (
+            <div>
+              <img src={`./${e.image}`} />
+              <Collection
+                img={`http://localhost:3000/${e.image}`}
+                title={e.title}
+                price={e.price}
+                key={e.id}
+              />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

@@ -32,3 +32,8 @@
   color: #808080;
   margin-bottom: 65px;
 }
+.shop_row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
+}
