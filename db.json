@@ -13,7 +13,7 @@
       "id": 1,
       "title": "Футболка USA",
       "price": 74,
-      "image": "./src/components/img/kup.png",
+      "image": "img/kup.png",
       "category": "t-shirt",
       "size": ["s", "m", "l", "xl"],
       "color": ["green", "black", "red"]
@@ -22,7 +22,7 @@
       "id": 2,
       "title": "Футболка KG",
       "price": 29,
-      "image": "",
+      "image": "img/kup.png",
       "category": "t-shirt",
       "size": ["s", "m", "l", "xl"],
       "color": ["green", "black", "white", "red"]
@@ -31,7 +31,7 @@
       "id": 3,
       "title": "Футболка RU",
       "price": 41,
-      "image": "",
+      "image": "img/kup.png",
       "category": "t-shirt",
       "size": ["s", "m", "l", "xl"],
       "color": ["green", "black"]
@@ -40,7 +40,7 @@
       "id": 4,
       "title": "Пальто prada",
       "price": 419,
-      "image": "",
+      "image": "img/shirt.png",
       "category": "сoat",
       "size": ["s", "m", "l", "xl"],
       "color": ["green", "black", "white", "grey"]
@@ -49,7 +49,7 @@
       "id": 5,
       "title": "Пальто летнее",
       "price": 209,
-      "image": "",
+      "image": "img/shirt.png",
       "category": "сoat",
       "size": ["s", "m", "l", "xl"],
       "color": ["green", "yellow", "orange"]
@@ -58,7 +58,7 @@
       "id": 6,
       "title": "Пальто утепленное",
       "price": 121,
-      "image": "",
+      "image": "img/shirt.png",
       "category": "сoat",
       "size": ["s", "m", "l", "xl"],
       "color": ["grey", "brown", "black", "yellow"]
@@ -67,7 +67,7 @@
       "id": 7,
       "title": "Кофта спортивная",
       "price": 51,
-      "image": "",
+      "image": "img/white.png",
       "category": "sweatshirt",
       "size": ["s", "m", "l", "xl"],
       "color": ["brown", "black", "grey"]
@@ -76,10 +76,19 @@
       "id": 8,
       "title": "Кофта pull and bear",
       "price": 64,
-      "image": "",
+      "image": "img/white.png",
       "category": "sweatshirt",
       "size": ["s", "m", "l", "xl"],
       "color": ["black", "white"]
+    },
+    {
+      "id": 9,
+      "title": "Кофта gucci",
+      "price": 124,
+      "image": "img/white.png",
+      "category": "sweatshirt",
+      "size": ["s", "m", "l", "xl"],
+      "color": ["black", "white", "pink"]
     }
   ]
 }

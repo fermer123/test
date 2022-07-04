@@ -70,15 +70,12 @@ const Shop = () => {
 
         <div className={style.shop_row}>
           {shop.map((e) => (
-            <div>
-              <img src={`./${e.image}`} />
-              <Collection
-                img={`http://localhost:3000/${e.image}`}
-                title={e.title}
-                price={e.price}
-                key={e.id}
-              />
-            </div>
+            <Collection
+              img={`../${e.image}`}
+              title={e.title}
+              price={e.price}
+              key={e.id}
+            />
           ))}
         </div>
       </div>
