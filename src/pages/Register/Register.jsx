@@ -21,44 +21,34 @@ const Register = () => {
         <div className={style.register_list}>
           <input
             className={style.input}
-            {...register('email', {
-              required: 'заполни поле',
-            })}
+            {...register('email')}
             type='email'
             placeholder='email'
           />
           {/* <span>{errors?.email && errors.email.message}</span> */}
           <input
-            {...register('login', {
-              required: 'заполни поле',
-            })}
+            {...register('login')}
             className={style.input}
             type='login'
             placeholder='login'
           />
 
           <input
-            {...register('phone', {
-              required: 'заполни поле',
-            })}
+            {...register('phone', {})}
             className={style.input}
             type='phone'
             placeholder='telephone'
           />
 
           <input
-            {...register('password', {
-              required: 'заполни поле',
-            })}
+            {...register('password')}
             className={style.input}
             type='password'
             placeholder='password'
           />
 
           <input
-            {...register('password', {
-              required: 'заполни поле',
-            })}
+            {...register('password')}
             className={style.input}
             type='password'
             placeholder='repeat password'

@@ -33,6 +33,7 @@
       "id": 3,
       "title": "Футболка RU",
       "price": 41,
+      "oldPrice": "",
       "image": "img/kup.png",
       "category": "t-shirt",
       "size": ["s", "m", "l", "xl"],
@@ -42,7 +43,8 @@
       "id": 4,
       "title": "Пальто prada",
       "price": 419,
-      "image": "img/shirt.png",
+      "oldPrice": 555,
+      "image": "img/palto.png",
       "category": "сoat",
       "size": ["s", "m", "l", "xl"],
       "color": ["green", "black", "white", "grey"]
@@ -51,7 +53,8 @@
       "id": 5,
       "title": "Пальто летнее",
       "price": 209,
-      "image": "img/shirt.png",
+      "oldPrice": "",
+      "image": "img/palto.png",
       "category": "сoat",
       "size": ["s", "m", "l", "xl"],
       "color": ["green", "yellow", "orange"]
@@ -60,7 +63,8 @@
       "id": 6,
       "title": "Пальто утепленное",
       "price": 121,
-      "image": "img/shirt.png",
+      "oldPrice": "",
+      "image": "img/palto.png",
       "category": "сoat",
       "size": ["s", "m", "l", "xl"],
       "color": ["grey", "brown", "black", "yellow"]
@@ -69,6 +73,7 @@
       "id": 7,
       "title": "Кофта спортивная",
       "price": 51,
+      "oldPrice": 87,
       "image": "img/white.png",
       "category": "sweatshirt",
       "size": ["s", "m", "l", "xl"],
@@ -78,6 +83,7 @@
       "id": 8,
       "title": "Кофта pull and bear",
       "price": 64,
+      "oldPrice": "",
       "image": "img/white.png",
       "category": "sweatshirt",
       "size": ["s", "m", "l", "xl"],
@@ -92,6 +98,126 @@
       "category": "sweatshirt",
       "size": ["s", "m", "l", "xl"],
       "color": ["black", "white", "pink"]
+    },
+    {
+      "id": 10,
+      "title": "Майка",
+      "price": 4,
+      "oldPrice": "",
+      "image": "img/kup.png",
+      "category": "t-shirt",
+      "size": ["s", "m", "l", "xl"],
+      "color": ["white", "pink", "blue"]
+    },
+    {
+      "id": 11,
+      "title": "Боди",
+      "price": 29,
+      "oldPrice": 47,
+      "image": "img/kup.png",
+      "category": "t-shirt",
+      "size": ["s", "m", "l", "xl"],
+      "color": ["green", "blue", "white", "red"]
+    },
+    {
+      "id": 12,
+      "title": "Купальник",
+      "price": 41,
+      "oldPrice": "",
+      "image": "img/kup.png",
+      "category": "t-shirt",
+      "size": ["s", "m", "l", "xl"],
+      "color": ["blue", "white"]
+    },
+    {
+      "id": 13,
+      "title": "Футболка element",
+      "price": 98,
+      "oldPrice": 100,
+      "image": "img/shirt.png",
+      "category": "сoat",
+      "size": ["s", "m", "l", "xl"],
+      "color": ["green", "black", "white", "grey"]
+    },
+    {
+      "id": 14,
+      "title": "Футболка летняя",
+      "price": 3,
+      "oldPrice": "4",
+      "image": "img/shirt.png",
+      "category": "сoat",
+      "size": ["s", "m", "l", "xl"],
+      "color": ["pink", "yellow", "orange"]
+    },
+    {
+      "id": 15,
+      "title": "Футболка",
+      "price": 121,
+      "oldPrice": "",
+      "image": "img/shirt.png",
+      "category": "сoat",
+      "size": ["s", "m", "l", "xl"],
+      "color": ["orange", "red", "yellow"]
+    },
+    {
+      "id": 16,
+      "title": "Кофта для бега",
+      "price": 43,
+      "oldPrice": "",
+      "image": "img/white.png",
+      "category": "sweatshirt",
+      "size": ["s", "m", "l", "xl"],
+      "color": ["white", "black", "grey"]
+    },
+    {
+      "id": 17,
+      "title": "Кофта bershka",
+      "price": 57,
+      "oldPrice": 68,
+      "image": "img/white.png",
+      "category": "sweatshirt",
+      "size": ["s", "m", "l", "xl"],
+      "color": ["black", "white", "purple"]
+    },
+    {
+      "id": 18,
+      "title": "Кофта весеняя",
+      "price": 24,
+      "oldPrice": 37,
+      "image": "img/white.png",
+      "category": "sweatshirt",
+      "size": ["s", "m", "l", "xl"],
+      "color": ["purple", "white", "pink"]
+    },
+    {
+      "id": 19,
+      "title": "Пляжная повседневная",
+      "price": 8,
+      "oldPrice": "",
+      "image": "img/kup.png",
+      "category": "t-shirt",
+      "size": ["s", "m", "l", "xl"],
+      "color": ["white", "pink", "blue"]
+    },
+    {
+      "id": 20,
+      "title": "Боди fendi",
+      "price": 290,
+      "oldPrice": 530,
+      "image": "img/kup.png",
+      "category": "t-shirt",
+      "size": ["s", "m", "l", "xl"],
+      "color": ["blue", "white", "black"]
+    },
+    {
+      "id": 21,
+      "title": "Боди",
+      "price": 11,
+      "oldPrice": 12,
+      "image": "img/kup.png",
+      "category": "t-shirt",
+      "size": ["s", "m", "l", "xl"],
+      "color": ["blue", "red", "pink", "purple"]
     }
   ]
 }
