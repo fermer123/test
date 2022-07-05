@@ -9,8 +9,8 @@ const Register = () => {
   const {
     register,
     handleSubmit,
-    setError: { errors },
-    reset,
+    // setError: { errors },
+    //  reset,
   } = useForm();
 
   return (

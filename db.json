@@ -75,7 +75,7 @@
       "price": 51,
       "oldPrice": 87,
       "image": "img/white.png",
-      "category": "sweatshirt",
+      "category": "hoodie",
       "size": ["s", "m", "l", "xl"],
       "color": ["brown", "black", "grey"]
     },
@@ -85,7 +85,7 @@
       "price": 64,
       "oldPrice": "",
       "image": "img/white.png",
-      "category": "sweatshirt",
+      "category": "hoodie",
       "size": ["s", "m", "l", "xl"],
       "color": ["black", "white"]
     },
@@ -95,7 +95,7 @@
       "price": 124,
       "oldPrice": 674,
       "image": "img/white.png",
-      "category": "sweatshirt",
+      "category": "hoodie",
       "size": ["s", "m", "l", "xl"],
       "color": ["black", "white", "pink"]
     },
@@ -155,7 +155,7 @@
       "price": 121,
       "oldPrice": "",
       "image": "img/shirt.png",
-      "category": "сoat",
+      "category": "hoodie",
       "size": ["s", "m", "l", "xl"],
       "color": ["orange", "red", "yellow"]
     },
@@ -165,7 +165,7 @@
       "price": 43,
       "oldPrice": "",
       "image": "img/white.png",
-      "category": "sweatshirt",
+      "category": "hoodie",
       "size": ["s", "m", "l", "xl"],
       "color": ["white", "black", "grey"]
     },

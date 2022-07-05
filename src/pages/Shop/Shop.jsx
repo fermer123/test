@@ -8,6 +8,14 @@ import Collection from '../Collection/Collection';
 const Shop = () => {
   const [status, setStatus] = useState('all');
   const { shop } = useContext(CustomContext);
+  const shopFilter = shop.filter((e) => {
+    if (status === 'all') {
+      return e;
+    } else {
+      return e.category === status;
+    }
+  });
+
   console.log(shop);
   return (
     <div className='container'>
@@ -41,9 +49,9 @@ const Shop = () => {
               ' ' +
               `${status === 'sweatshirt' && style.shop_item_active}`
             }
-            onClick={() => setStatus('sweatshirt')}
+            onClick={() => setStatus('t-shirt')}
           >
-            Свитшоты
+            Футболки
           </li>
           <li
             className={
@@ -51,9 +59,9 @@ const Shop = () => {
               ' ' +
               `${status === 'cardigan' && style.shop_item_active}`
             }
-            onClick={() => setStatus('cardigan')}
+            onClick={() => setStatus('sweatshirt')}
           >
-            Кардиганы
+            Свитшоты
           </li>
           <li
             className={
@@ -69,7 +77,7 @@ const Shop = () => {
         <p className={style.shop_items_show}>Показано: 9 из 12 товаров</p>
 
         <div className={style.shop_row}>
-          {shop.map((e) => (
+          {shopFilter.map((e) => (
             <Collection
               img={`../${e.image}`}
               title={e.title}

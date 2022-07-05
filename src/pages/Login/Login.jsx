@@ -8,8 +8,8 @@ const Login = () => {
   const {
     register,
     handleSubmit,
-    setError: { errors },
-    reset,
+    // setError: { errors },
+    //reset,
   } = useForm();
 
   const { Login } = useContext(CustomContext);
