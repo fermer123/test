@@ -1,0 +1,24 @@
+.profile {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  border: 1px solid;
+  border-radius: 20px;
+  padding: 10px;
+  justify-self: center;
+  .name {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .telephone {
+    flex-direction: column;
+  }
+  .email {
+    flex-direction: column;
+  }
+  .birthday {
+    flex-direction: column;
+  }
+}

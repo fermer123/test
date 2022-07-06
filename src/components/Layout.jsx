@@ -9,6 +9,7 @@ import Cart from '../pages/Cart/Cart';
 import NotFound from '../pages/NotFound/NotFound';
 import Login from '../pages/Login/Login';
 import Register from '../pages/Register/Register';
+import Profile from '../pages/Profile/Profile';
 
 const Layout = () => {
   const location = useLocation();
@@ -28,6 +29,7 @@ const Layout = () => {
         <Route path='/cart' element={<Cart />} />
         <Route path='/login' element={<Login />} />
         <Route path='/register' element={<Register />} />
+        <Route path='/profile' element={<Profile />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
       {location.pathname === '/' ||
