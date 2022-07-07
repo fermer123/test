@@ -16,7 +16,6 @@ const Shop = () => {
     }
   });
 
-  console.log(shop);
   return (
     <div className='container'>
       <h2 className='title'>Shop</h2>

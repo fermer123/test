@@ -5,7 +5,7 @@ import style from './Profile.module.scss';
 
 const Profile = () => {
   const { user, Logout } = useContext(CustomContext);
-  console.log(user);
+
   return (
     <div className='container'>
       <div className={style.container}>
