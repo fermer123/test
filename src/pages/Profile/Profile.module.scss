@@ -1,24 +1,117 @@
+.container {
+  border: 1px solid;
+  border-radius: 20px;
+  padding: 40px;
+}
+
 .profile {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 20px;
-  border: 1px solid;
-  border-radius: 20px;
-  padding: 10px;
-  justify-self: center;
+  justify-items: center;
   .name {
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
+
+    .name1 {
+      margin-bottom: 5px;
+      &::after {
+        content: '';
+        display: block;
+        width: 100px;
+        height: 3px;
+        background-color: black;
+      }
+    }
+    &:active,
+    &:hover,
+    &:focus {
+      color: #6e9c9f;
+    }
   }
 
   .telephone {
     flex-direction: column;
+    text-align: center;
+    .telephone1 {
+      margin-bottom: 5px;
+      &::after {
+        content: '';
+        display: block;
+        width: 100px;
+        height: 3px;
+        background-color: black;
+      }
+    }
+    &:active,
+    &:hover,
+    &:focus {
+      color: #6e9c9f;
+    }
   }
   .email {
     flex-direction: column;
+    text-align: center;
+    .email1 {
+      margin-bottom: 5px;
+      &::after {
+        content: '';
+        display: block;
+        width: 100px;
+        height: 3px;
+        background-color: black;
+      }
+    }
+    &:active,
+    &:hover,
+    &:focus {
+      color: #6e9c9f;
+    }
   }
   .birthday {
     flex-direction: column;
+    text-align: center;
+    .birthday1 {
+      margin-bottom: 5px;
+      &::after {
+        content: '';
+        display: block;
+        width: 100px;
+        height: 3px;
+        background-color: black;
+      }
+    }
+    &:active,
+    &:hover,
+    &:focus {
+      color: #6e9c9f;
+    }
+  }
+}
+
+.btn {
+  margin: 0 auto;
+  margin-top: 50px;
+  border: 1px solid;
+  border-radius: 20px;
+  max-width: 100px;
+}
+
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 40px;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: #000000;
+  &:active,
+  &:hover,
+  &:focus {
+    color: #6e9c9f;
   }
 }

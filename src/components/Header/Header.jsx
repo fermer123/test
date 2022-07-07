@@ -55,10 +55,9 @@ const Header = () => {
           {!!user.login ? (
             <NavLink
               className={style.login + ' ' + style.header_link}
-              to='/'
-              onClick={Logout}
+              to='/profile'
             >
-              logout
+              profile
             </NavLink>
           ) : (
             <NavLink
