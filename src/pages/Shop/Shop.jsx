@@ -4,10 +4,17 @@ import { useState } from 'react';
 import { useContext } from 'react';
 import { CustomContext } from '../../Context';
 import Collection from '../Collection/Collection';
+import Pagination from '../../components/Pagination/Pagination';
 
 const Shop = () => {
   const [status, setStatus] = useState('all');
   const { shop } = useContext(CustomContext);
+  const [currPage, setCurrPage] = useState(1);
+  const [items] = useState(4);
+  const lastItemIndex = currPage * items;
+  const firstItemIndex = lastItemIndex - items;
+  const pageNumber = [];
+
   const shopFilter = shop.filter((e) => {
     if (status === 'all') {
       return e;
@@ -15,6 +22,10 @@ const Shop = () => {
       return e.category === status;
     }
   });
+  for (let i = 1; i <= Math.ceil(shopFilter.length / items); i++) {
+    pageNumber.push(i);
+  }
+  const currentItem = shopFilter.slice(firstItemIndex, lastItemIndex);
 
   return (
     <div className='container'>
@@ -86,6 +97,11 @@ const Shop = () => {
             />
           ))}
         </div>
+      </div>
+      <div>
+        {pageNumber.map((e) => (
+          <Pagination items={items} shopFilter={shopFilter} key={e} />
+        ))}
       </div>
     </div>
   );
