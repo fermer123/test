@@ -98,9 +98,9 @@ const Shop = () => {
           ))}
         </div>
       </div>
-      <div>
+      <div className={style.pagination}>
         {pageNumber.map((e) => (
-          <Pagination items={items} shopFilter={shopFilter} key={e} />
+          <Pagination currPage={e} key={e} />
         ))}
       </div>
     </div>

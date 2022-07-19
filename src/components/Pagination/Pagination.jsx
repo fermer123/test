@@ -1,7 +1,9 @@
-const Pagination = ({ items, shopFilter }) => {
+import style from './Pagination.module.scss';
+
+const Pagination = ({ currPage }) => {
   return (
-    <div className='container'>
-      <div>as</div>
+    <div>
+      <div className={style.pagiation}>{currPage}</div>
     </div>
   );
 };

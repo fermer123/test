@@ -1,0 +1,13 @@
+.pagiation {
+  font-size: 18px;
+  border: 1px solid;
+  padding: 7px 10px;
+  margin-left: 10px;
+  margin-bottom: 25px;
+  max-width: 40px;
+  border-radius: 50%;
+  &:hover,
+  &:focus {
+    background-color: #6e9c9f;
+  }
+}
