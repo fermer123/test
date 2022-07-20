@@ -1,9 +1,11 @@
 import style from './Pagination.module.scss';
 
-const Pagination = ({ currPage }) => {
+const Pagination = ({ currPage, pagination }) => {
   return (
     <div>
-      <div className={style.pagiation}>{currPage}</div>
+      <div onClick={() => pagination(currPage)} className={style.pagiation}>
+        {currPage}
+      </div>
     </div>
   );
 };

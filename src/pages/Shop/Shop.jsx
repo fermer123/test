@@ -10,9 +10,9 @@ const Shop = () => {
   const [status, setStatus] = useState('all');
   const { shop } = useContext(CustomContext);
   const [currPage, setCurrPage] = useState(1);
-  const [items] = useState(4);
-  const lastItemIndex = currPage * items;
-  const firstItemIndex = lastItemIndex - items;
+  const [itemsPerPage] = useState(3);
+  const lastItemIndex = currPage * itemsPerPage;
+  const firstItemIndex = lastItemIndex - itemsPerPage;
   const pageNumber = [];
 
   const shopFilter = shop.filter((e) => {
@@ -22,11 +22,13 @@ const Shop = () => {
       return e.category === status;
     }
   });
-  for (let i = 1; i <= Math.ceil(shopFilter.length / items); i++) {
+  for (let i = 1; i <= Math.ceil(shopFilter.length / itemsPerPage); i++) {
     pageNumber.push(i);
   }
   const currentItem = shopFilter.slice(firstItemIndex, lastItemIndex);
-
+  const pagination = (numberPage) => {
+    setCurrPage(numberPage);
+  };
   return (
     <div className='container'>
       <h2 className='title'>Shop</h2>
@@ -87,7 +89,7 @@ const Shop = () => {
         <p className={style.shop_items_show}>Показано: 9 из 12 товаров</p>
 
         <div className={style.shop_row}>
-          {shopFilter.map((e) => (
+          {currentItem.map((e) => (
             <Collection
               img={`../${e.image}`}
               title={e.title}
@@ -100,7 +102,7 @@ const Shop = () => {
       </div>
       <div className={style.pagination}>
         {pageNumber.map((e) => (
-          <Pagination currPage={e} key={e} />
+          <Pagination currPage={e} key={e} pagination={pagination} />
         ))}
       </div>
     </div>
