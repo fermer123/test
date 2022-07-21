@@ -86,7 +86,10 @@ const Shop = () => {
             Толстовки
           </li>
         </ul>
-        <p className={style.shop_items_show}>Показано: 9 из 12 товаров</p>
+        <p className={style.shop_items_show}>
+          {/* переделать, работает не правильно товаров Показано */}
+          {currentItem.length * currPage} из {shopFilter.length}
+        </p>
 
         <div className={style.shop_row}>
           {currentItem.map((e) => (
