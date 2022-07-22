@@ -16,11 +16,7 @@ const Shop = () => {
   const pageNumber = [];
 
   const shopFilter = shop.filter((e) => {
-    if (status === 'all') {
-      return e;
-    } else {
-      return e.category === status;
-    }
+    return status === 'all' ? e : e.category === status;
   });
   for (let i = 1; i <= Math.ceil(shopFilter.length / itemsPerPage); i++) {
     pageNumber.push(i);
