@@ -59,7 +59,7 @@ const Shop = () => {
             className={
               style.shop_item +
               ' ' +
-              `${status === 'sweatshirt' && style.shop_item_active}`
+              `${status === 't-shirt' && style.shop_item_active}`
             }
             onClick={() => setStatus('t-shirt')}
           >
@@ -69,7 +69,7 @@ const Shop = () => {
             className={
               style.shop_item +
               ' ' +
-              `${status === 'cardigan' && style.shop_item_active}`
+              `${status === 'sweatshirt' && style.shop_item_active}`
             }
             onClick={() => setStatus('sweatshirt')}
           >
