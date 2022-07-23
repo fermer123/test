@@ -11,6 +11,7 @@ const Shop = () => {
   const { shop } = useContext(CustomContext);
   const [currPage, setCurrPage] = useState(1);
   const [itemsPerPage] = useState(3);
+  const [element, setElement] = useState(true);
 
   const lastItemIndex = currPage * itemsPerPage;
   const firstItemIndex = lastItemIndex - itemsPerPage;
@@ -26,6 +27,12 @@ const Shop = () => {
   const pagination = (numberPage) => {
     setCurrPage(numberPage);
   };
+
+  const ChangeStatus = (e) => {
+    setCurrPage(1);
+    setStatus(e);
+  };
+
   return (
     <div className='container'>
       <h2 className='title'>Shop</h2>
@@ -38,7 +45,7 @@ const Shop = () => {
               ' ' +
               `${status === 'all' && style.shop_item_active}`
             }
-            onClick={() => setStatus('all')}
+            onClick={() => ChangeStatus('all')}
           >
             Все
           </li>
@@ -48,7 +55,7 @@ const Shop = () => {
               ' ' +
               `${status === 'сoat' && style.shop_item_active}`
             }
-            onClick={() => setStatus('сoat')}
+            onClick={() => ChangeStatus('сoat')}
           >
             Пальто
           </li>
@@ -58,7 +65,7 @@ const Shop = () => {
               ' ' +
               `${status === 't-shirt' && style.shop_item_active}`
             }
-            onClick={() => setStatus('t-shirt')}
+            onClick={() => ChangeStatus('t-shirt')}
           >
             Футболки
           </li>
@@ -68,7 +75,7 @@ const Shop = () => {
               ' ' +
               `${status === 'sweatshirt' && style.shop_item_active}`
             }
-            onClick={() => setStatus('sweatshirt')}
+            onClick={() => ChangeStatus('sweatshirt')}
           >
             Свитшоты
           </li>
@@ -84,7 +91,6 @@ const Shop = () => {
           </li>
         </ul>
         <p className={style.shop_items_show}>
-          {/* переделать, работает не правильно товаров Показано */}
           {currentItem.length * currPage} из {shopFilter.length}
         </p>
 
@@ -101,9 +107,24 @@ const Shop = () => {
         </div>
       </div>
       <div className={style.pagination}>
-        {pageNumber.map((e) => (
-          <Pagination currPage={e} key={e} pagination={pagination} />
-        ))}
+        {pageNumber.map((e) =>
+          Number(e) === currPage ? (
+            <Pagination
+              element={element}
+              setElement={setElement}
+              currPage={e}
+              key={e}
+              pagination={pagination}
+            />
+          ) : (
+            <Pagination
+              setElement={setElement}
+              currPage={e}
+              key={e}
+              pagination={pagination}
+            />
+          ),
+        )}
       </div>
     </div>
   );
