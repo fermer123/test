@@ -11,6 +11,7 @@ const Shop = () => {
   const { shop } = useContext(CustomContext);
   const [currPage, setCurrPage] = useState(1);
   const [itemsPerPage] = useState(3);
+
   const lastItemIndex = currPage * itemsPerPage;
   const firstItemIndex = lastItemIndex - itemsPerPage;
   const pageNumber = [];
