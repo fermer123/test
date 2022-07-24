@@ -85,7 +85,7 @@ const Shop = () => {
               ' ' +
               `${status === 'hoodie' && style.shop_item_active}`
             }
-            onClick={() => setStatus('hoodie')}
+            onClick={() => ChangeStatus('hoodie')}
           >
             Толстовки
           </li>
