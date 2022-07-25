@@ -12,14 +12,23 @@ const Shop = () => {
   const [currPage, setCurrPage] = useState(1);
   const [itemsPerPage] = useState(3);
   const [element, setElement] = useState(true);
+  const [category, setCategory] = useState('');
 
   const lastItemIndex = currPage * itemsPerPage;
   const firstItemIndex = lastItemIndex - itemsPerPage;
   const pageNumber = [];
 
-  const shopFilter = shop.filter((e) => {
-    return status === 'all' ? e : e.category === status;
-  });
+  const shopFilter = shop
+    .sort((a, b) => {
+      if (category === 'bigger') {
+        return a.price - b.price;
+      } else if (category === 'less') {
+        return b.price - a.price;
+      }
+    })
+    .filter((e) => {
+      return status === 'all' ? e : e.category === status;
+    });
   for (let i = 1; i <= Math.ceil(shopFilter.length / itemsPerPage); i++) {
     pageNumber.push(i);
   }
@@ -93,6 +102,15 @@ const Shop = () => {
         <p className={style.shop_items_show}>
           {currentItem.length * currPage} из {shopFilter.length}
         </p>
+
+        <div>
+          <div>
+            <button onClick={() => setCategory('bigger')}>по возр</button>
+          </div>
+          <div>
+            <button onClick={() => setCategory('less')}>по убыв</button>
+          </div>
+        </div>
 
         <div className={style.shop_row}>
           {currentItem.map((e) => (
