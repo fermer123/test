@@ -42,7 +42,11 @@ const Shop = () => {
     setStatus(e);
   };
   const option = ['bigger', 'less'].map((e, index) => {
-    return <option key={index}>{e}</option>;
+    return (
+      <option className={style.select_option} key={index}>
+        {e}
+      </option>
+    );
   });
   return (
     <div className='container'>
@@ -104,7 +108,11 @@ const Shop = () => {
         <p className={style.shop_items_show}>
           {currentItem.length * currPage} из {shopFilter.length}
         </p>
-        <select value={category} onChange={(e) => setCategory(e.target.value)}>
+        <select
+          className={style.select}
+          value={category}
+          onChange={(e) => setCategory(e.target.value)}
+        >
           {option}
         </select>
 
