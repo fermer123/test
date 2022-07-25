@@ -41,7 +41,9 @@ const Shop = () => {
     setCurrPage(1);
     setStatus(e);
   };
-
+  const option = ['bigger', 'less'].map((e, index) => {
+    return <option key={index}>{e}</option>;
+  });
   return (
     <div className='container'>
       <h2 className='title'>Shop</h2>
@@ -102,15 +104,9 @@ const Shop = () => {
         <p className={style.shop_items_show}>
           {currentItem.length * currPage} из {shopFilter.length}
         </p>
-
-        <div>
-          <div>
-            <button onClick={() => setCategory('bigger')}>по возр</button>
-          </div>
-          <div>
-            <button onClick={() => setCategory('less')}>по убыв</button>
-          </div>
-        </div>
+        <select value={category} onChange={(e) => setCategory(e.target.value)}>
+          {option}
+        </select>
 
         <div className={style.shop_row}>
           {currentItem.map((e) => (
