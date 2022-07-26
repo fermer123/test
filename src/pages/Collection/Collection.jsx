@@ -2,7 +2,6 @@ import { NavLink } from 'react-router-dom';
 import style from './Collection.module.scss';
 
 const Collection = ({ img, title, price, oldPrice, id }) => {
-  console.log(Number(id));
   return (
     <div className='container' id={id}>
       <div className={style.collection}>
