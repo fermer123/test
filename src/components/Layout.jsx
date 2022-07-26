@@ -10,6 +10,7 @@ import NotFound from '../pages/NotFound/NotFound';
 import Login from '../pages/Login/Login';
 import Register from '../pages/Register/Register';
 import Profile from '../pages/Profile/Profile';
+import Product from '../pages/Product/Product';
 
 const Layout = () => {
   const location = useLocation();
@@ -27,20 +28,17 @@ const Layout = () => {
         <Route path='/shop' element={<Shop />} />
         <Route path='/brands' element={<Brands />} />
         <Route path='/cart' element={<Cart />} />
+        <Route path='/product:id' element={<Product />} />
         <Route path='/login' element={<Login />} />
         <Route path='/register' element={<Register />} />
         <Route path='/profile' element={<Profile />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
-      {location.pathname === '/' ||
-      location.pathname === '/contact' ||
-      location.pathname === '/shop' ||
-      location.pathname === '/brands' ||
-      location.pathname === '/cart' ||
-      location.pathname === '/login' ||
-      location.pathname === '/register' ? (
+      {location.pathname === '/login' || location.pathname === '/register' ? (
+        ''
+      ) : (
         <Footer />
-      ) : null}
+      )}
     </div>
   );
 };
