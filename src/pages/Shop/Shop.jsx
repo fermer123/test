@@ -107,14 +107,14 @@ const Shop = () => {
         </ul>
         <p className={style.shop_items_show}>
           {currentItem.length * currPage} из {shopFilter.length}
+          <select
+            className={style.select}
+            value={category}
+            onChange={(e) => setCategory(e.target.value)}
+          >
+            {option}
+          </select>
         </p>
-        <select
-          className={style.select}
-          value={category}
-          onChange={(e) => setCategory(e.target.value)}
-        >
-          {option}
-        </select>
 
         <div className={style.shop_row}>
           {currentItem.map((e) => (
@@ -124,6 +124,7 @@ const Shop = () => {
               price={e.price}
               oldPrice={e.oldPrice}
               key={e.id}
+              id={e.id}
             />
           ))}
         </div>
