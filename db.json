@@ -361,7 +361,7 @@
     },
     {
       "id": 36,
-      "title": "Футболка",
+      "title": "hoodie",
       "price": 121,
       "oldPrice": "",
       "image": "img/shirt.png",
@@ -428,6 +428,26 @@
       "category": "t-shirt",
       "size": ["s", "m", "l", "xl"],
       "color": ["blue", "red", "pink", "purple"]
+    },
+    {
+      "id": 43,
+      "title": "Кофта h&m",
+      "price": 74,
+      "oldPrice": "",
+      "image": "img/white.png",
+      "category": "sweatshirt",
+      "size": ["s", "m", "l", "xl"],
+      "color": ["black", "white", "grey"]
+    },
+    {
+      "id": 44,
+      "title": "Кофта sweet",
+      "price": 84,
+      "oldPrice": "",
+      "image": "img/white.png",
+      "category": "sweatshirt",
+      "size": ["s", "m", "l"],
+      "color": ["black", "white", "red"]
     }
   ]
 }

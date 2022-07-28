@@ -5,12 +5,12 @@ import { useContext } from 'react';
 import { CustomContext } from '../../Context';
 import Collection from '../Collection/Collection';
 import Pagination from '../../components/Pagination/Pagination';
+import { NavLink } from 'react-router-dom';
 
 const Shop = () => {
-  const [status, setStatus] = useState('all');
-  const { shop } = useContext(CustomContext);
-  const [currPage, setCurrPage] = useState(1);
-  const [itemsPerPage] = useState(3);
+  const { shop, currPage, setCurrPage, status, setStatus } =
+    useContext(CustomContext);
+  const [itemsPerPage] = useState(6);
   const [element, setElement] = useState(true);
   const [category, setCategory] = useState('');
 
@@ -51,7 +51,18 @@ const Shop = () => {
   return (
     <div className='container'>
       <h2 className='title'>Shop</h2>
-      <div className={style.shop_link}>главная-магазин</div>
+      <div className={style.shop_link}>
+        <NavLink to='/'>Главная</NavLink> -{' '}
+        <NavLink
+          onClick={() => {
+            setStatus('all');
+            setCurrPage(1);
+          }}
+          to='/shop'
+        >
+          Магазин
+        </NavLink>
+      </div>
       <div className={style.shop}>
         <ul className={style.shop_list}>
           <li

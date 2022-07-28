@@ -11,6 +11,8 @@ export const Context = ({ children }) => {
     login: '',
   });
   const [shop, setShop] = useState([]);
+  const [currPage, setCurrPage] = useState(1);
+  const [status, setStatus] = useState('all');
 
   useEffect(() => {
     if (localStorage.getItem('user') !== null) {
@@ -50,6 +52,10 @@ export const Context = ({ children }) => {
     Register,
     Logout,
     Login,
+    currPage,
+    setCurrPage,
+    status,
+    setStatus,
   };
 
   return (

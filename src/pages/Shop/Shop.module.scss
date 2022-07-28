@@ -79,3 +79,10 @@
     }
   }
 }
+a {
+  text-decoration: none;
+  color: #919191;
+  &:hover {
+    text-decoration: underline;
+  }
+}
