@@ -16,7 +16,7 @@ const Product = () => {
       setProduct(data),
     );
   }, []);
-
+  console.log(product.size);
   return (
     <div className='container'>
       <h2 className={'title' + ' ' + style.title}>Product</h2>
@@ -47,17 +47,18 @@ const Product = () => {
 
           <div className={style.product_size}>
             <ul>
-              {/* {product.size.map((index, e) => (
-                <li key={index}>{e}</li>
-              ))} */}
+              {product.size
+                ? product.size.map((index, e) => <li key={index}>{e}</li>)
+                : null}
             </ul>
 
             <div className={style.choose}>Выберете цвет</div>
-            <ul>
-              {/* {product.size.map((index, e) => (
+
+            {/* <ul>
+              {product.size.map((e, index) => (
                 <li key={index}>{e}</li>
-              ))} */}
-            </ul>
+              ))}
+            </ul> */}
 
             <div className={style.product_quantity}>
               <input defaultValue={1} />
