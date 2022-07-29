@@ -5,12 +5,15 @@
   margin-left: 10px;
   margin-bottom: 25px;
   max-width: 40px;
-  border-radius: 50%;
+
   &:hover,
   &:focus {
-    background-color: #6e9c9f;
+    background-color: black;
+    color: white;
   }
 }
 .active {
-  background-color: #6e9c9f;
+  background-color: black;
+  color: white;
+  transition: 0.3s;
 }

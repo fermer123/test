@@ -14,12 +14,12 @@
       font-size: 17px;
       line-height: 140%;
       letter-spacing: 0.02em;
-      transition: 0.4s all;
       &:hover,
       &:focus,
       &:active {
         color: white;
         background: black;
+        transition: 0.3s;
       }
     }
   }
