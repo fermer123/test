@@ -43,7 +43,9 @@ const Product = () => {
         <div className={style.product_info}>
           <div className={style.product_price}>
             <div className={style.product_price_new}>${product.price}</div>
-            <div className={style.product_price_old}>${product.oldPrice}</div>
+            {product.oldPrice ? (
+              <div className={style.product_price_old}>${product.oldPrice}</div>
+            ) : null}
           </div>
           <div className={style.choose}>Выберете размер</div>
           <ul className={style.product_size}>
@@ -68,8 +70,10 @@ const Product = () => {
               : null}
           </ul>
           <div className={style.product_quantity}>
-            <input defaultValue={1} />
-            <button>Добавить в корзину</button>
+            <input className={style.product_quantity_input} defaultValue={1} />
+            <button className={style.product_quantity_button}>
+              Добавить в корзину
+            </button>
           </div>
         </div>
       </div>
