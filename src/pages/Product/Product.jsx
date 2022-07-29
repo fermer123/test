@@ -46,34 +46,30 @@ const Product = () => {
             <div className={style.product_price_old}>${product.oldPrice}</div>
           </div>
           <div className={style.choose}>Выберете размер</div>
-
-          <div className={style.product_size}>
-            <ul>
-              {product.size
-                ? product.size.map((index, e) => (
-                    <li className={style.product_size_element} key={index}>
-                      {e}
-                    </li>
-                  ))
-                : null}
-            </ul>
-
-            <div className={style.choose}>Выберете цвет</div>
-
-            <ul>
-              {product.color
-                ? product.size.map((e, index) => (
-                    <li className={style.product_color_element} key={index}>
-                      {e}
-                    </li>
-                  ))
-                : null}
-            </ul>
-
-            <div className={style.product_quantity}>
-              <input defaultValue={1} />
-              <button>Добавить в корзину</button>
-            </div>
+          <ul className={style.product_size}>
+            {product.size
+              ? product.size.map((e, index) => (
+                  <li className={style.product_size_element} key={index}>
+                    {e}
+                  </li>
+                ))
+              : null}
+          </ul>
+          <div className={style.choose}>Выберете цвет</div>
+          <ul className={style.product_color}>
+            {product.color
+              ? product.color.map((e, index) => (
+                  <li
+                    className={style.product_color_element}
+                    style={{ 'background-color': e }}
+                    key={index}
+                  ></li>
+                ))
+              : null}
+          </ul>
+          <div className={style.product_quantity}>
+            <input defaultValue={1} />
+            <button>Добавить в корзину</button>
           </div>
         </div>
       </div>

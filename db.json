@@ -17,7 +17,7 @@
       "image": "img/kup.png",
       "category": "t-shirt",
       "size": ["s", "m", "l", "xl"],
-      "color": ["green", "black", "red"]
+      "color": ["#235989", "#FD9696", "#927876", "#D5D5D5", "#a095be"]
     },
     {
       "id": 2,
@@ -27,7 +27,7 @@
       "image": "img/kup.png",
       "category": "t-shirt",
       "size": ["s", "m", "l", "xl"],
-      "color": ["green", "black", "white", "red"]
+      "color": ["#FD9696", "#927876", "#D5D5D5", "#a095be"]
     },
     {
       "id": 3,
@@ -37,7 +37,7 @@
       "image": "img/kup.png",
       "category": "t-shirt",
       "size": ["s", "m", "l", "xl"],
-      "color": ["green", "black"]
+      "color": ["green", " #927876", "#FDC796"]
     },
     {
       "id": 4,
@@ -47,7 +47,7 @@
       "image": "img/palto.png",
       "category": "сoat",
       "size": ["s", "m", "l", "xl"],
-      "color": ["green", "black", "white", "grey"]
+      "color": ["#927876", "#FDC796", "#D5D5D5", "grey"]
     },
     {
       "id": 5,
@@ -57,7 +57,7 @@
       "image": "img/palto.png",
       "category": "сoat",
       "size": ["s", "m", "l", "xl"],
-      "color": ["green", "yellow", "orange"]
+      "color": ["#FD9696", "#927876", "#D5D5D5", "#FDC796"]
     },
     {
       "id": 6,
@@ -67,7 +67,7 @@
       "image": "img/palto.png",
       "category": "сoat",
       "size": ["s", "m", "l", "xl"],
-      "color": ["grey", "brown", "black", "yellow"]
+      "color": ["grey", "#927876", "#D5D5D5", "#FDC796"]
     },
     {
       "id": 7,
@@ -77,7 +77,7 @@
       "image": "img/white.png",
       "category": "hoodie",
       "size": ["s", "m", "l", "xl"],
-      "color": ["brown", "black", "grey"]
+      "color": ["brown", "#FD9696", "#927876", "#D5D5D5", "#FDC796"]
     },
     {
       "id": 8,
@@ -87,7 +87,7 @@
       "image": "img/white.png",
       "category": "hoodie",
       "size": ["s", "m", "l", "xl"],
-      "color": ["black", "white"]
+      "color": ["#FD9696", "#D5D5D5", "#FDC796"]
     },
     {
       "id": 9,
@@ -97,7 +97,7 @@
       "image": "img/white.png",
       "category": "hoodie",
       "size": ["s", "m", "l", "xl"],
-      "color": ["black", "white", "pink"]
+      "color": ["#FD9696", "#927876", "#D5D5D5", "#FDC796"]
     },
     {
       "id": 10,
@@ -107,7 +107,7 @@
       "image": "img/kup.png",
       "category": "t-shirt",
       "size": ["s", "m", "l", "xl"],
-      "color": ["white", "pink", "blue"]
+      "color": ["#927876", "#FDC796", "blue"]
     },
     {
       "id": 11,
@@ -117,7 +117,7 @@
       "image": "img/kup.png",
       "category": "t-shirt",
       "size": ["s", "m", "l", "xl"],
-      "color": ["green", "blue", "white", "red"]
+      "color": ["#FD9696", "#927876", "#D5D5D5", "#92751"]
     },
     {
       "id": 12,
@@ -137,7 +137,7 @@
       "image": "img/shirt.png",
       "category": "сoat",
       "size": ["s", "m", "l", "xl"],
-      "color": ["green", "black", "white", "grey"]
+      "color": ["#FD9696", "#927876", "#D5D5D5", "#FDC796"]
     },
     {
       "id": 14,
@@ -147,7 +147,7 @@
       "image": "img/shirt.png",
       "category": "сoat",
       "size": ["s", "m", "l", "xl"],
-      "color": ["pink", "yellow", "orange"]
+      "color": ["#FD9696", "#D5D5D5", "#FDC796", "orange"]
     },
     {
       "id": 15,
@@ -157,7 +157,7 @@
       "image": "img/shirt.png",
       "category": "hoodie",
       "size": ["s", "m", "l", "xl"],
-      "color": ["orange", "red", "yellow"]
+      "color": ["#FD9696", "#927876", "#D5D5D5", "#FDC796", "yellow"]
     },
     {
       "id": 16,
@@ -167,7 +167,7 @@
       "image": "img/white.png",
       "category": "hoodie",
       "size": ["s", "m", "l", "xl"],
-      "color": ["white", "black", "grey"]
+      "color": ["#927876", "#D5D5D5"]
     },
     {
       "id": 17,
@@ -177,7 +177,7 @@
       "image": "img/white.png",
       "category": "sweatshirt",
       "size": ["s", "m", "l", "xl"],
-      "color": ["black", "white", "purple"]
+      "color": ["#FD9696", "#927876", "#FDC796", "#6E9C9F"]
     },
     {
       "id": 18,
@@ -187,7 +187,7 @@
       "image": "img/white.png",
       "category": "sweatshirt",
       "size": ["s", "m", "l", "xl"],
-      "color": ["purple", "white", "pink"]
+      "color": ["#927876", "#6E9C9F", "#91573"]
     },
     {
       "id": 19,
@@ -197,7 +197,7 @@
       "image": "img/kup.png",
       "category": "t-shirt",
       "size": ["s", "m", "l", "xl"],
-      "color": ["white", "pink", "blue"]
+      "color": ["#FD9681", "#927876", "#FDC796", "#91743"]
     },
     {
       "id": 20,
@@ -207,7 +207,7 @@
       "image": "img/kup.png",
       "category": "t-shirt",
       "size": ["s", "m", "l", "xl"],
-      "color": ["blue", "white", "black"]
+      "color": ["#e69138", "#7b996e", "#927876", "#D5D5D5", "#38761d"]
     },
     {
       "id": 21,
@@ -217,7 +217,7 @@
       "image": "img/kup.png",
       "category": "t-shirt",
       "size": ["s", "m", "l", "xl"],
-      "color": ["blue", "red", "pink", "purple"]
+      "color": ["#FD9696", "#927876", "#FDC796", "#571247"]
     },
     {
       "id": 22,
@@ -227,7 +227,7 @@
       "image": "img/kup.png",
       "category": "t-shirt",
       "size": ["s", "m", "l", "xl"],
-      "color": ["green", "black", "red"]
+      "color": ["#d192a9", "#927876", "##4b3b41", "#571247"]
     },
     {
       "id": 23,
@@ -237,7 +237,7 @@
       "image": "img/kup.png",
       "category": "t-shirt",
       "size": ["s", "m", "l", "xl"],
-      "color": ["green", "black", "white", "red"]
+      "color": ["#d192a9", "#70bbca", "#6b3046", "#571247"]
     },
     {
       "id": 24,
@@ -247,7 +247,7 @@
       "image": "img/kup.png",
       "category": "t-shirt",
       "size": ["s", "m", "l", "xl"],
-      "color": ["green", "black"]
+      "color": ["#d192a9", "#571247", "#45bfd9", "#571247"]
     },
     {
       "id": 25,
@@ -257,7 +257,7 @@
       "image": "img/palto.png",
       "category": "сoat",
       "size": ["s", "m", "l", "xl"],
-      "color": ["green", "black", "white", "grey"]
+      "color": ["#235989", "#5f797e", "#927876", "#b2d4a5", "#a095be"]
     },
     {
       "id": 26,
@@ -267,7 +267,7 @@
       "image": "img/palto.png",
       "category": "сoat",
       "size": ["s", "m", "l", "xl"],
-      "color": ["green", "yellow", "orange"]
+      "color": ["#b2d4a5", "#FD9696", "#927876", "#D5D5D5", "#5f797e"]
     },
     {
       "id": 27,
@@ -277,7 +277,7 @@
       "image": "img/palto.png",
       "category": "сoat",
       "size": ["s", "m", "l", "xl"],
-      "color": ["grey", "brown", "black", "yellow"]
+      "color": ["#e69138", "#7b996e", "#927876", "#D5D5D5", "#38761d"]
     },
     {
       "id": 28,
@@ -287,7 +287,7 @@
       "image": "img/white.png",
       "category": "hoodie",
       "size": ["s", "m", "l", "xl"],
-      "color": ["brown", "black", "grey"]
+      "color": ["#235989", "#FD9696", "#927876", "#D5D5D5", "#a095be"]
     },
     {
       "id": 29,
@@ -297,7 +297,7 @@
       "image": "img/white.png",
       "category": "hoodie",
       "size": ["s", "m", "l", "xl"],
-      "color": ["black", "white"]
+      "color": ["#235989", "#FD9696", "#927876", "#D5D5D5", "#a095be"]
     },
     {
       "id": 30,
@@ -307,7 +307,7 @@
       "image": "img/white.png",
       "category": "hoodie",
       "size": ["s", "m", "l", "xl"],
-      "color": ["black", "white", "pink"]
+      "color": ["#ef8d8d", "#93c7ed", "#ddd4f7", "#D5D5D5", "#af9134"]
     },
     {
       "id": 31,
@@ -317,7 +317,7 @@
       "image": "img/kup.png",
       "category": "t-shirt",
       "size": ["s", "m", "l", "xl"],
-      "color": ["white", "pink", "blue"]
+      "color": ["#235989", "#FD9696", "#927876", "#D5D5D5", "#a095be"]
     },
     {
       "id": 32,
@@ -327,7 +327,7 @@
       "image": "img/kup.png",
       "category": "t-shirt",
       "size": ["s", "m", "l", "xl"],
-      "color": ["green", "blue", "white", "red"]
+      "color": ["#e69138", "#7b996e", "#927876", "#D5D5D5", "#38761d"]
     },
     {
       "id": 33,
@@ -337,7 +337,7 @@
       "image": "img/kup.png",
       "category": "sweatshirt",
       "size": ["s", "m", "l", "xl"],
-      "color": ["blue", "white"]
+      "color": ["#235989", "#FD9696", "#927876", "#D5D5D5", "#a095be"]
     },
     {
       "id": 34,
@@ -347,7 +347,7 @@
       "image": "img/shirt.png",
       "category": "сoat",
       "size": ["s", "m", "l", "xl"],
-      "color": ["green", "black", "white", "grey"]
+      "color": ["#97854f", "#7b996e", "#927876", "#c27ba0", "#38761d"]
     },
     {
       "id": 35,
@@ -357,7 +357,7 @@
       "image": "img/shirt.png",
       "category": "сoat",
       "size": ["s", "m", "l", "xl"],
-      "color": ["pink", "yellow", "orange"]
+      "color": ["#e69138", "#7b996e", "#927876", "#D5D5D5", "#38761d"]
     },
     {
       "id": 36,
@@ -367,7 +367,7 @@
       "image": "img/shirt.png",
       "category": "hoodie",
       "size": ["s", "m", "l", "xl"],
-      "color": ["orange", "red", "yellow"]
+      "color": ["#235989", "#FD9696", "#927876", "#D5D5D5", "#a095be"]
     },
     {
       "id": 37,
@@ -377,7 +377,7 @@
       "image": "img/white.png",
       "category": "hoodie",
       "size": ["s", "m", "l", "xl"],
-      "color": ["white", "black", "grey"]
+      "color": ["#235989", "#FD9696", "#927876", "#D5D5D5", "#a095be"]
     },
     {
       "id": 38,
@@ -387,7 +387,7 @@
       "image": "img/white.png",
       "category": "sweatshirt",
       "size": ["s", "m", "l", "xl"],
-      "color": ["black", "white", "purple"]
+      "color": ["#ef8d8d", "#93c7ed", "#ddd4f7", "#D5D5D5", "#af9134"]
     },
     {
       "id": 39,
@@ -397,7 +397,7 @@
       "image": "img/white.png",
       "category": "sweatshirt",
       "size": ["s", "m", "l", "xl"],
-      "color": ["purple", "white", "pink"]
+      "color": ["#235989", "#FD9696", "#927876", "#D5D5D5", "#a095be"]
     },
     {
       "id": 40,
@@ -407,7 +407,7 @@
       "image": "img/kup.png",
       "category": "t-shirt",
       "size": ["s", "m", "l", "xl"],
-      "color": ["white", "pink", "blue"]
+      "color": ["#e69138", "#7b996e", "#927876", "#D5D5D5", "#38761d"]
     },
     {
       "id": 41,
@@ -417,7 +417,7 @@
       "image": "img/kup.png",
       "category": "sweatshirt",
       "size": ["s", "m", "l", "xl"],
-      "color": ["blue", "white", "black"]
+      "color": ["#FD9696", "#927876", "#D5D5D5"]
     },
     {
       "id": 42,
@@ -427,7 +427,7 @@
       "image": "img/kup.png",
       "category": "t-shirt",
       "size": ["s", "m", "l", "xl"],
-      "color": ["blue", "red", "pink", "purple"]
+      "color": ["#ef8d8d", "#93c7ed", "#ddd4f7", "#D5D5D5", "#af9134"]
     },
     {
       "id": 43,
@@ -437,7 +437,7 @@
       "image": "img/white.png",
       "category": "sweatshirt",
       "size": ["s", "m", "l", "xl"],
-      "color": ["black", "white", "grey"]
+      "color": ["#78b1be", "#FD9696", "#927876", "#D5D5D5"]
     },
     {
       "id": 44,
@@ -447,7 +447,7 @@
       "image": "img/white.png",
       "category": "sweatshirt",
       "size": ["s", "m", "l"],
-      "color": ["black", "white", "red"]
+      "color": ["#927876", "#D5D5D5"]
     }
   ]
 }
