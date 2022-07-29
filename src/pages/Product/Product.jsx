@@ -19,7 +19,7 @@ const Product = () => {
   console.log(product.size);
   return (
     <div className='container'>
-      <h2 className={'title' + ' ' + style.title}>Product</h2>
+      <h2 className={'title' + ' ' + style.title}>{product.title}</h2>
       <div className={style.way}>
         <NavLink to='/'>Главная</NavLink> -{' '}
         <NavLink
@@ -41,24 +41,34 @@ const Product = () => {
           alt={product.title}
         />
         <div className={style.product_info}>
-          <div className={style.product_price}></div>
-
+          <div className={style.product_price}>
+            <div className={style.product_price_new}>${product.price}</div>
+            <div className={style.product_price_old}>${product.oldPrice}</div>
+          </div>
           <div className={style.choose}>Выберете размер</div>
 
           <div className={style.product_size}>
             <ul>
               {product.size
-                ? product.size.map((index, e) => <li key={index}>{e}</li>)
+                ? product.size.map((index, e) => (
+                    <li className={style.product_size_element} key={index}>
+                      {e}
+                    </li>
+                  ))
                 : null}
             </ul>
 
             <div className={style.choose}>Выберете цвет</div>
 
-            {/* <ul>
-              {product.size.map((e, index) => (
-                <li key={index}>{e}</li>
-              ))}
-            </ul> */}
+            <ul>
+              {product.color
+                ? product.size.map((e, index) => (
+                    <li className={style.product_color_element} key={index}>
+                      {e}
+                    </li>
+                  ))
+                : null}
+            </ul>
 
             <div className={style.product_quantity}>
               <input defaultValue={1} />
