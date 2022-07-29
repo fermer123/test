@@ -2,7 +2,6 @@ import { useTranslation } from 'react-i18next';
 import style from './Footer.module.scss';
 import { NavLink } from 'react-router-dom';
 import Logo from '../img/Logo.svg';
-import call from '../img/call.svg';
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -35,7 +34,7 @@ const Footer = () => {
         </li>
         <li>
           <div>+7 (495) 823-54-12</div>
-          <div> hello@womazing.com</div>
+          <div>hello@womazing.com</div>
         </li>
       </ul>
     </div>

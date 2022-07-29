@@ -10,13 +10,17 @@ const Product = () => {
   const params = useParams();
   const { setCurrPage, setStatus } = useContext(CustomContext);
   const [product, setProduct] = useState({});
+  const [color, setColor] = useState('');
+  const [size, setSize] = useState('');
 
   useEffect(() => {
-    axios(`http://localhost:8080/clothes/${params.id}`).then(({ data }) =>
-      setProduct(data),
-    );
+    axios(`http://localhost:8080/clothes/${params.id}`).then(({ data }) => {
+      setProduct(data);
+      setColor(data.color[0]);
+      setSize(data.size[0]);
+    });
   }, []);
-  console.log(product.size);
+
   return (
     <div className='container'>
       <h2 className={'title' + ' ' + style.title}>{product.title}</h2>
@@ -50,8 +54,16 @@ const Product = () => {
           <div className={style.choose}>Выберете размер</div>
           <ul className={style.product_size}>
             {product.size
-              ? product.size.map((e, index) => (
-                  <li className={style.product_size_element} key={index}>
+              ? product.size.map((e) => (
+                  <li
+                    onClick={() => setSize(e)}
+                    className={
+                      style.product_size_element +
+                      ' ' +
+                      `${e === size ? style.product_size_element_active : ' '}`
+                    }
+                    key={e}
+                  >
                     {e}
                   </li>
                 ))
@@ -60,11 +72,16 @@ const Product = () => {
           <div className={style.choose}>Выберете цвет</div>
           <ul className={style.product_color}>
             {product.color
-              ? product.color.map((e, index) => (
+              ? product.color.map((e) => (
                   <li
-                    className={style.product_color_element}
-                    style={{ 'background-color': e }}
-                    key={index}
+                    onClick={() => setColor(e)}
+                    className={
+                      style.product_color_element +
+                      ' ' +
+                      `${e === color ? style.product_color_element_active : ''}`
+                    }
+                    style={{ background: e }}
+                    key={e}
                   ></li>
                 ))
               : null}

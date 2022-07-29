@@ -81,6 +81,16 @@ li {
       line-height: 140%;
       letter-spacing: 0.02em;
       margin-bottom: 60px;
+      text-transform: uppercase;
+      &:hover {
+        color: white;
+        background-color: #000000;
+        transition: 0.3s;
+      }
+    }
+    .product_size_element_active {
+      color: white;
+      background-color: #000000;
     }
   }
 
@@ -93,8 +103,16 @@ li {
       width: 41px;
       height: 41px;
       border-radius: 50%;
+      &:hover {
+        border: 1px solid;
+        transition: 0.3s;
+      }
+    }
+    .product_color_element_active {
+      border: 1px solid;
     }
   }
+
   .product_quantity {
     display: flex;
     flex-direction: row;
