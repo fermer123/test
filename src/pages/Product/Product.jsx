@@ -5,10 +5,11 @@ import { NavLink, useParams } from 'react-router-dom';
 import { useContext, useEffect } from 'react';
 import { useState } from 'react';
 import { CustomContext } from '../../Context';
+import Collection from '../Collection/Collection';
 
 const Product = () => {
   const params = useParams();
-  const { setCurrPage, setStatus } = useContext(CustomContext);
+  const { setCurrPage, setStatus, shop } = useContext(CustomContext);
   const [product, setProduct] = useState({});
   const [color, setColor] = useState('');
   const [size, setSize] = useState('');
@@ -19,7 +20,7 @@ const Product = () => {
       setColor(data.color[0]);
       setSize(data.size[0]);
     });
-  }, []);
+  }, [params]);
 
   return (
     <div className='container'>
@@ -92,6 +93,24 @@ const Product = () => {
               Добавить в корзину
             </button>
           </div>
+        </div>
+        <div className={style.any}>Связанные товары</div>
+        <div className={style.any_items}>
+          {shop
+            .filter((e) => {
+              return e.category === product.category && e.id !== product.id;
+            })
+            .slice(0, 3)
+            .map((e) => (
+              <Collection
+                img={`../${e.image}`}
+                title={e.title}
+                price={e.price}
+                oldPrice={e.oldPrice}
+                key={e.id}
+                id={e.id}
+              />
+            ))}
         </div>
       </div>
     </div>

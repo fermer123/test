@@ -145,3 +145,20 @@ li {
     outline: none;
   }
 }
+
+.any {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 110%;
+  margin-top: 130px;
+  margin-bottom: 67px;
+  letter-spacing: 0.02em;
+  color: #000000;
+}
+.any_items {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
