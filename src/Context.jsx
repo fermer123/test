@@ -13,6 +13,11 @@ export const Context = ({ children }) => {
   const [shop, setShop] = useState([]);
   const [currPage, setCurrPage] = useState(1);
   const [status, setStatus] = useState('all');
+  const [cart, setCart] = useState([]);
+  console.log(cart);
+  const addCart = (product) => {
+    setCart([...cart, product]);
+  };
 
   useEffect(() => {
     if (localStorage.getItem('user') !== null) {
@@ -56,6 +61,9 @@ export const Context = ({ children }) => {
     setCurrPage,
     status,
     setStatus,
+    cart,
+    setCart,
+    addCart,
   };
 
   return (

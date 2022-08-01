@@ -9,10 +9,11 @@ import Collection from '../Collection/Collection';
 
 const Product = () => {
   const params = useParams();
-  const { setCurrPage, setStatus, shop } = useContext(CustomContext);
+  const { setCurrPage, setStatus, shop, addCart } = useContext(CustomContext);
   const [product, setProduct] = useState({});
   const [color, setColor] = useState('');
   const [size, setSize] = useState('');
+  const [count, setCount] = useState(1);
 
   useEffect(() => {
     axios(`http://localhost:8080/clothes/${params.id}`).then(({ data }) => {
@@ -88,8 +89,26 @@ const Product = () => {
               : null}
           </ul>
           <div className={style.product_quantity}>
-            <input className={style.product_quantity_input} defaultValue={1} />
-            <button className={style.product_quantity_button}>
+            <input
+              onChange={(e) => setCount(e.target.value)}
+              className={style.product_quantity_input}
+              value={count}
+            />
+            <button
+              className={style.product_quantity_button}
+              onClick={() =>
+                addCart({
+                  id: product.id,
+                  title: product.title,
+                  image: product.image,
+                  price: product.price,
+                  category: product.category,
+                  color,
+                  size,
+                  count,
+                })
+              }
+            >
               Добавить в корзину
             </button>
           </div>

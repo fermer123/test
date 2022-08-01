@@ -22,6 +22,7 @@ a {
     line-height: 140%;
     letter-spacing: 0.02em;
     color: #000000;
+    margin-bottom: 50px;
     li:first-child {
       padding-right: 416px;
     }
@@ -37,7 +38,49 @@ a {
       background-color: #cccccc;
       height: 1px;
       width: 100%;
-      margin-bottom: 23px;
     }
+  }
+}
+
+.basketBack {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-height: 205px;
+
+  .delete {
+    position: relative;
+    &::before {
+      position: absolute;
+      top: 50%;
+      transform: translate(50%);
+      display: block;
+      content: '';
+      width: 12px;
+      height: 1px;
+      background-color: #000000;
+      transform: rotate(45deg);
+    }
+    &::after {
+      position: absolute;
+      top: 50%;
+      transform: translate(50%);
+      display: block;
+      content: '';
+      width: 12px;
+      height: 1px;
+      background-color: #000000;
+      transform: rotate(-45deg);
+    }
+  }
+  .img {
+  }
+  .name {
+  }
+  .price {
+  }
+  .count {
+  }
+  .sum {
   }
 }
