@@ -1,0 +1,43 @@
+a {
+  text-decoration: none;
+  color: #919191;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.cart {
+  margin-bottom: 130px;
+  .shop_link {
+    margin-bottom: 214px;
+  }
+
+  .ol_name {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    color: #000000;
+    li:first-child {
+      padding-right: 416px;
+    }
+    li:last-child {
+      margin-right: 99px;
+    }
+    &::after {
+      display: block;
+      content: '';
+      position: absolute;
+      top: 46px;
+      left: 0;
+      background-color: #cccccc;
+      height: 1px;
+      width: 100%;
+      margin-bottom: 23px;
+    }
+  }
+}
