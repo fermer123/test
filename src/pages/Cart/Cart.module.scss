@@ -24,7 +24,8 @@ a {
     color: #000000;
     margin-bottom: 50px;
     li:first-child {
-      padding-right: 416px;
+      margin-left: 70px;
+      padding-right: 336px;
     }
     li:last-child {
       margin-right: 99px;
@@ -47,6 +48,7 @@ a {
   align-items: center;
   justify-content: space-between;
   max-height: 205px;
+  margin-bottom: 10px;
 
   .delete {
     position: relative;
@@ -73,14 +75,51 @@ a {
       transform: rotate(-45deg);
     }
   }
+  .basket_item {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 36px;
+  }
   .img {
+    display: block;
+    width: 136px;
+    height: 205px;
+    float: left;
+    object-fit: cover;
   }
   .name {
+    font-size: 20px;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    color: #000000;
+    font-weight: 500;
   }
   .price {
+    font-size: 20px;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    color: #000000;
+    font-weight: 500;
+    padding-left: 60px;
   }
   .count {
+    font-size: 20px;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    color: #000000;
+    font-weight: 500;
+    transform: translate(50%);
+    padding: 10px 20px;
+    border: 1px solid #afafaf;
   }
   .sum {
+    margin-right: 99px;
+    font-size: 20px;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    color: #000000;
+    font-weight: 500;
   }
 }

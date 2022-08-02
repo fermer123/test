@@ -1,14 +1,16 @@
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import style from './Cart.module.scss';
 import { CustomContext } from '../../Context';
 
 const Cart = () => {
   const { cart } = useContext(CustomContext);
-
-  const deleteItem = (e) => {
-    return cart.filter((e) => e !== cart.id);
+  const deleteItem = (id) => {
+    return cart.filter((e) => e.id !== id);
   };
+  useEffect(() => {
+    deleteItem();
+  }, [cart]);
 
   return (
     <div className='container'>
@@ -24,16 +26,19 @@ const Cart = () => {
           <li className={style.li_name}>Всего</li>
         </ul>
         {cart.map((e, idx) => (
-          <div key={e.idx} className={style.basketBack}>
-            <div
-              onClick={(e) => deleteItem(idx)}
-              className={style.delete}
-            ></div>
-            <img className={style.img} src={`../${e.image}`} />
-            <div className={style.name}>{e.title}</div>
-            <div className={style.price}>{e.price}</div>
+          <div key={idx} className={style.basketBack}>
+            <div className={style.basket_item}>
+              <div
+                onClick={(e) => deleteItem(e.id)}
+                className={style.delete}
+              ></div>
+              <img className={style.img} src={`../${e.image}`} />
+              <div className={style.name}>{e.title}</div>
+            </div>
+
+            <div className={style.price}>${e.price}</div>
             <div className={style.count}>{e.count}</div>
-            <div className={style.sum}></div>
+            <div className={style.sum}>${e.price * e.count}</div>
           </div>
         ))}
       </div>
