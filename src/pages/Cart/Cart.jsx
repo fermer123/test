@@ -1,16 +1,10 @@
-import { useContext, useEffect } from 'react';
+import { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
 import style from './Cart.module.scss';
 import { CustomContext } from '../../Context';
 
 const Cart = () => {
-  const { cart } = useContext(CustomContext);
-  const deleteItem = (id) => {
-    return cart.filter((e) => e.id !== id);
-  };
-  useEffect(() => {
-    deleteItem();
-  }, [cart]);
+  const { cart, deleteItem } = useContext(CustomContext);
 
   return (
     <div className='container'>
@@ -29,10 +23,14 @@ const Cart = () => {
           <div key={idx} className={style.basketBack}>
             <div className={style.basket_item}>
               <div
-                onClick={(e) => deleteItem(e.id)}
+                onClick={() => {
+                  deleteItem(e.id, e.size, e.color, e.title, e.price);
+                }}
                 className={style.delete}
               ></div>
-              <img className={style.img} src={`../${e.image}`} />
+              <NavLink to={`/product/${e.id}`}>
+                <img className={style.img} src={`../${e.image}`} />
+              </NavLink>
               <div className={style.name}>{e.title}</div>
             </div>
 
@@ -41,6 +39,15 @@ const Cart = () => {
             <div className={style.sum}>${e.price * e.count}</div>
           </div>
         ))}
+        <div className={style.end_info}>
+          <div className={style.end_price}>
+            <div className={style.end_price_text}>Итого:</div>
+            <div className={style.end_price_price}>
+              $ {cart.reduce((acc, val) => acc + val.price * val.count, 0)}
+            </div>
+          </div>
+          <button className={style.end_info_btn}>Оформить заказ</button>
+        </div>
       </div>
     </div>
   );

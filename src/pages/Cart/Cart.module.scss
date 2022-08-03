@@ -52,6 +52,7 @@ a {
 
   .delete {
     position: relative;
+    cursor: pointer;
     &::before {
       position: absolute;
       top: 50%;
@@ -121,5 +122,42 @@ a {
     letter-spacing: 0.02em;
     color: #000000;
     font-weight: 500;
+  }
+}
+
+.end_info {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: row;
+  gap: 15px;
+  .end_price {
+    background: #f1eadc;
+    width: 287px;
+    height: 68px;
+    padding: 16px 31px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    color: #000000;
+    .end_price_price {
+      margin-right: 20px;
+    }
+  }
+  .end_info_btn {
+    cursor: pointer;
+    background: #6e9c9f;
+    width: 287px;
+    height: 68px;
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 138.9%;
+    text-align: center;
+    letter-spacing: 0.02em;
   }
 }

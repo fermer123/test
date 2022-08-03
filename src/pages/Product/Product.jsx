@@ -10,10 +10,11 @@ import Collection from '../Collection/Collection';
 const Product = () => {
   const params = useParams();
   const { setCurrPage, setStatus, shop, addCart } = useContext(CustomContext);
-  const [product, setProduct] = useState({});
+
   const [color, setColor] = useState('');
   const [size, setSize] = useState('');
   const [count, setCount] = useState(1);
+  const [product, setProduct] = useState({});
 
   useEffect(() => {
     axios(`http://localhost:8080/clothes/${params.id}`).then(({ data }) => {

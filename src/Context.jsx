@@ -14,9 +14,47 @@ export const Context = ({ children }) => {
   const [currPage, setCurrPage] = useState(1);
   const [status, setStatus] = useState('all');
   const [cart, setCart] = useState([]);
-  console.log(cart);
+
   const addCart = (product) => {
-    setCart([...cart, product]);
+    const sameItem = cart.findIndex(
+      (e) =>
+        e.id === product.id &&
+        e.title === product.title &&
+        e.price === product.price &&
+        e.color === product.color &&
+        e.size === product.size,
+    );
+    if (sameItem >= 0) {
+      setCart(
+        cart.map((e) => {
+          if (
+            e.id === product.id &&
+            e.title === product.title &&
+            e.price === product.price &&
+            e.color === product.color &&
+            e.size === product.size
+          ) {
+            return { ...e, count: +cart[sameItem].count + +product.count };
+          } else return e;
+        }),
+      );
+    } else {
+      setCart([...cart, product]);
+    }
+  };
+
+  const deleteItem = (id, size, color, title, price) => {
+    setCart(
+      cart.filter((e) => {
+        return (
+          e.id !== id &&
+          e.size !== size &&
+          e.title !== title &&
+          e.color !== color &&
+          e.price !== price
+        );
+      }),
+    );
   };
 
   useEffect(() => {
@@ -64,6 +102,7 @@ export const Context = ({ children }) => {
     cart,
     setCart,
     addCart,
+    deleteItem,
   };
 
   return (
