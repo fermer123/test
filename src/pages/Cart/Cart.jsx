@@ -5,7 +5,7 @@ import { CustomContext } from '../../Context';
 import CartItem from '../CartItem/CartItem';
 
 const Cart = () => {
-  const { cart, deleteItem, setCount, count } = useContext(CustomContext);
+  const { cart } = useContext(CustomContext);
 
   return (
     <div className='container'>
@@ -16,7 +16,7 @@ const Cart = () => {
         </div>
         <ul className={style.ol_name}>
           <li className={style.li_name}>Товар</li>
-          <li className={style.li_name}>Цена</li>
+          <li className={style.li_name1}>Цена</li>
           <li className={style.li_name}>Количество</li>
           <li className={style.li_name}>Всего</li>
         </ul>
@@ -28,8 +28,6 @@ const Cart = () => {
             color={e.color}
             title={e.title}
             price={e.price}
-            count={count}
-            setCount={setCount}
             image={e.image}
           />
         ))}

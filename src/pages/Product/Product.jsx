@@ -9,11 +9,11 @@ import Collection from '../Collection/Collection';
 
 const Product = () => {
   const params = useParams();
-  const { setCurrPage, setStatus, shop, addCart } = useContext(CustomContext);
+  const { setCurrPage, setStatus, shop, addCart, count, setCount } =
+    useContext(CustomContext);
 
   const [color, setColor] = useState('');
   const [size, setSize] = useState('');
-  const [count, setCount] = useState(1);
   const [product, setProduct] = useState({});
 
   useEffect(() => {
@@ -94,6 +94,7 @@ const Product = () => {
               onChange={(e) => setCount(e.target.value)}
               className={style.product_quantity_input}
               value={count}
+              min='1'
             />
             <button
               className={style.product_quantity_button}
@@ -101,12 +102,12 @@ const Product = () => {
                 addCart({
                   id: product.id,
                   title: product.title,
-                  image: product.image,
+                  count,
                   price: product.price,
                   category: product.category,
                   color,
                   size,
-                  count,
+                  image: product.image,
                 })
               }
             >

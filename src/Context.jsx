@@ -14,12 +14,12 @@ export const Context = ({ children }) => {
   const [currPage, setCurrPage] = useState(1);
   const [status, setStatus] = useState('all');
   const [cart, setCart] = useState([]);
+  const [count, setCount] = useState(1);
 
   const addCart = (product) => {
     const sameItem = cart.findIndex(
       (e) =>
         e.id === product.id &&
-        e.title === product.title &&
         e.price === product.price &&
         e.color === product.color &&
         e.size === product.size,
@@ -29,13 +29,17 @@ export const Context = ({ children }) => {
         cart.map((e) => {
           if (
             e.id === product.id &&
-            e.title === product.title &&
             e.price === product.price &&
             e.color === product.color &&
             e.size === product.size
           ) {
-            return { ...e, count: +cart[sameItem].count + +product.count };
-          } else return e;
+            return {
+              ...e,
+              count: +cart[sameItem].count + +product.count,
+            };
+          } else {
+            return e;
+          }
         }),
       );
     } else {
@@ -43,16 +47,25 @@ export const Context = ({ children }) => {
     }
   };
 
-  const deleteItem = (id, size, color, title, price) => {
+  const updateItem = (id, color, size, count) => {
+    setCart(
+      cart.map((e) => {
+        if (e.id === id && e.color === color && e.size === size) {
+          return {
+            ...e,
+            count: count,
+          };
+        } else {
+          return e;
+        }
+      }),
+    );
+  };
+
+  const deleteItem = (id, size, color) => {
     setCart(
       cart.filter((e) => {
-        return (
-          e.id !== id &&
-          e.size !== size &&
-          e.title !== title &&
-          e.color !== color &&
-          e.price !== price
-        );
+        return e.id !== id && e.size !== size && e.color !== color;
       }),
     );
   };
@@ -62,10 +75,17 @@ export const Context = ({ children }) => {
       setUser(JSON.parse(localStorage.getItem('user')));
     }
 
+    if (localStorage.getItem('cart') !== null) {
+      setCart(JSON.parse(localStorage.getItem('cart')));
+    }
     const clothes = axios
       .get('http://localhost:8080/clothes')
       .then(({ data }) => setShop(data));
   }, []);
+
+  useEffect(() => {
+    localStorage.setItem('cart', JSON.stringify(cart));
+  }, [cart]);
 
   const Register = async (data) => {
     const resp = await axios.post('http://localhost:8080/register', {
@@ -103,6 +123,9 @@ export const Context = ({ children }) => {
     setCart,
     addCart,
     deleteItem,
+    count,
+    setCount,
+    updateItem,
   };
 
   return (

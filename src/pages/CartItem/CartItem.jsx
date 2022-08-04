@@ -3,23 +3,15 @@ import { NavLink } from 'react-router-dom';
 import { CustomContext } from '../../Context';
 import style from './CartItem.module.scss';
 
-const CartItem = ({
-  id,
-  size,
-  color,
-  title,
-  price,
-  count,
-  setCount,
-  image,
-}) => {
-  const { deleteItem } = useContext(CustomContext);
+const CartItem = ({ id, size, color, title, price, image }) => {
+  const { deleteItem, setCount, updateItem, count } = useContext(CustomContext);
+
   return (
     <div className={style.basketBack}>
       <div className={style.basket_item}>
         <div
           onClick={() => {
-            deleteItem(id, size, color, title, price);
+            deleteItem(id, size, color);
           }}
           className={style.delete}
         ></div>
@@ -32,7 +24,10 @@ const CartItem = ({
       <div className={style.price}>${price}</div>
 
       <input
-        onChange={(e) => setCount(e.target.value)}
+        onChange={(e) => {
+          setCount(e.target.value);
+          updateItem(id, color, size, e.target.value);
+        }}
         className={style.count}
         value={count}
       />
