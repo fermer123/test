@@ -16,6 +16,23 @@ export const Context = ({ children }) => {
   const [cart, setCart] = useState([]);
   const [count, setCount] = useState(1);
 
+  useEffect(() => {
+    if (localStorage.getItem('user') !== null) {
+      setUser(JSON.parse(localStorage.getItem('user')));
+    }
+
+    if (localStorage.getItem('cart') !== null) {
+      setCart(JSON.parse(localStorage.getItem('cart')));
+    }
+    const clothes = axios
+      .get('http://localhost:8080/clothes')
+      .then(({ data }) => setShop(data));
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('cart', JSON.stringify(cart));
+  }, [cart]);
+
   const addCart = (product) => {
     const sameItem = cart.findIndex(
       (e) =>
@@ -69,23 +86,6 @@ export const Context = ({ children }) => {
       }),
     );
   };
-
-  useEffect(() => {
-    if (localStorage.getItem('user') !== null) {
-      setUser(JSON.parse(localStorage.getItem('user')));
-    }
-
-    if (localStorage.getItem('cart') !== null) {
-      setCart(JSON.parse(localStorage.getItem('cart')));
-    }
-    const clothes = axios
-      .get('http://localhost:8080/clothes')
-      .then(({ data }) => setShop(data));
-  }, []);
-
-  useEffect(() => {
-    localStorage.setItem('cart', JSON.stringify(cart));
-  }, [cart]);
 
   const Register = async (data) => {
     const resp = await axios.post('http://localhost:8080/register', {
