@@ -2,9 +2,10 @@ import { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
 import style from './Cart.module.scss';
 import { CustomContext } from '../../Context';
+import CartItem from '../CartItem/CartItem';
 
 const Cart = () => {
-  const { cart, deleteItem } = useContext(CustomContext);
+  const { cart, deleteItem, setCount, count } = useContext(CustomContext);
 
   return (
     <div className='container'>
@@ -20,24 +21,17 @@ const Cart = () => {
           <li className={style.li_name}>Всего</li>
         </ul>
         {cart.map((e, idx) => (
-          <div key={idx} className={style.basketBack}>
-            <div className={style.basket_item}>
-              <div
-                onClick={() => {
-                  deleteItem(e.id, e.size, e.color, e.title, e.price);
-                }}
-                className={style.delete}
-              ></div>
-              <NavLink to={`/product/${e.id}`}>
-                <img className={style.img} src={`../${e.image}`} />
-              </NavLink>
-              <div className={style.name}>{e.title}</div>
-            </div>
-
-            <div className={style.price}>${e.price}</div>
-            <div className={style.count}>{e.count}</div>
-            <div className={style.sum}>${e.price * e.count}</div>
-          </div>
+          <CartItem
+            key={idx}
+            id={e.id}
+            size={e.size}
+            color={e.color}
+            title={e.title}
+            price={e.price}
+            count={count}
+            setCount={setCount}
+            image={e.image}
+          />
         ))}
         <div className={style.end_info}>
           <div className={style.end_price}>
