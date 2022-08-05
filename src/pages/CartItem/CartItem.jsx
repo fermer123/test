@@ -16,7 +16,7 @@ const CartItem = ({ id, size, color, title, price, image, count }) => {
           className={style.delete}
         ></div>
         <NavLink to={`/product/${id}`}>
-          <img className={style.img} src={`../${image}`} />
+          <img className={style.img} src={`../${image}`} alt={image} />
         </NavLink>
         <div className={style.name}>{title}</div>
       </div>
