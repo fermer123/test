@@ -29,6 +29,7 @@ const Cart = () => {
             title={e.title}
             price={e.price}
             image={e.image}
+            count={e.count}
           />
         ))}
         <div className={style.end_info}>

@@ -3,8 +3,8 @@ import { NavLink } from 'react-router-dom';
 import { CustomContext } from '../../Context';
 import style from './CartItem.module.scss';
 
-const CartItem = ({ id, size, color, title, price, image }) => {
-  const { deleteItem, setCount, updateItem, count } = useContext(CustomContext);
+const CartItem = ({ id, size, color, title, price, image, count }) => {
+  const { deleteItem, setCount, updateItem } = useContext(CustomContext);
 
   return (
     <div className={style.basketBack}>
@@ -24,12 +24,12 @@ const CartItem = ({ id, size, color, title, price, image }) => {
       <div className={style.price}>${price}</div>
 
       <input
+        className={style.count}
+        value={count}
         onChange={(e) => {
           setCount(e.target.value);
           updateItem(id, color, size, e.target.value);
         }}
-        className={style.count}
-        value={count}
       />
 
       <div className={style.sum}>${price * count}</div>

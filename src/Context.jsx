@@ -33,26 +33,27 @@ export const Context = ({ children }) => {
     localStorage.setItem('cart', JSON.stringify(cart));
   }, [cart]);
 
-  const addCart = (product) => {
+  const addCart = (item) => {
     const sameItem = cart.findIndex(
       (e) =>
-        e.id === product.id &&
-        e.price === product.price &&
-        e.color === product.color &&
-        e.size === product.size,
+        e.id === item.id &&
+        e.price === item.price &&
+        e.color === item.color &&
+        e.size === item.size,
     );
+
     if (sameItem >= 0) {
       setCart(
         cart.map((e) => {
           if (
-            e.id === product.id &&
-            e.price === product.price &&
-            e.color === product.color &&
-            e.size === product.size
+            e.id === item.id &&
+            e.price === item.price &&
+            e.color === item.color &&
+            e.size === item.size
           ) {
             return {
               ...e,
-              count: +cart[sameItem].count + +product.count,
+              count: +cart[sameItem].count + +item.count,
             };
           } else {
             return e;
@@ -60,7 +61,7 @@ export const Context = ({ children }) => {
         }),
       );
     } else {
-      setCart([...cart, product]);
+      setCart([...cart, item]);
     }
   };
 
@@ -105,6 +106,7 @@ export const Context = ({ children }) => {
 
   const Logout = () => {
     localStorage.removeItem('user');
+    localStorage.removeItem('cart');
     setUser({ login: '' });
   };
 
