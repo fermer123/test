@@ -15,7 +15,6 @@ const Register = () => {
 
   return (
     <div className='container'>
-      <div className={style.register}></div>
       <form onSubmit={handleSubmit(Register)}>
         <h2 className={style.register_h2}>Register</h2>
         <div className={style.register_list}>
@@ -55,10 +54,10 @@ const Register = () => {
           />
         </div>
         <button className={style.btn} type='submit'>
-          sign in
+          Зарегестрироваться
         </button>
         <NavLink className={style.header_link} to='/login'>
-          login?
+          Есть аккаунт?
         </NavLink>
       </form>
     </div>

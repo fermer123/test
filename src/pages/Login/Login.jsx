@@ -1,54 +1,46 @@
 import style from './Login.module.scss';
 import { NavLink } from 'react-router-dom';
-import { useForm } from 'react-hook-form';
 import { useContext } from 'react';
 import { CustomContext } from '../../Context';
+import { useInput } from '../../components/input/input';
 
 const Login = () => {
-  const {
-    register,
-    handleSubmit,
-    // setError: { errors },
-    //reset,
-  } = useForm();
-
   const { Login } = useContext(CustomContext);
-
+  const user = useInput('');
+  const pass = useInput('');
   return (
     <div className='container'>
       <div className={style.login}></div>
-      <form onSubmit={handleSubmit(Login)}>
-        <h2 className={style.login_h2}>Login</h2>
-        <div className={style.login_list}>
-          <input
-            className={style.input}
-            required
-            type='email'
-            placeholder='email'
-            {...register('email', {
-              required: 'заполни поле',
-            })}
-          />
 
-          <input
-            className={style.input}
-            required
-            type='password'
-            placeholder='password'
-            {...register('password', {
-              required: 'заполни поле',
-            })}
-          />
-        </div>
-        <button className={style.btn} type='submit'>
-          sign in
-        </button>
-        <p>
-          <NavLink className={style.header_link} to='/register'>
-            register?
-          </NavLink>
-        </p>
-      </form>
+      <h2 className={style.login_h2}>Login</h2>
+      <div className={style.login_list}>
+        <input
+          className={style.input}
+          required
+          type='email'
+          placeholder='email'
+          {...user}
+        />
+
+        <input
+          className={style.input}
+          required
+          type='password'
+          placeholder='password'
+          {...pass}
+        />
+      </div>
+      <button
+        className={style.btn}
+        onClick={() => Login({ email: user.value, password: pass.value })}
+      >
+        Войти
+      </button>
+      <p>
+        <NavLink className={style.header_link} to='/register'>
+          Зарегестрироваться
+        </NavLink>
+      </p>
     </div>
   );
 };
