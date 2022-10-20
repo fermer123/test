@@ -34,9 +34,7 @@ function App() {
 
   return (
     <Suspense fallback={'Loading...'}>
-      <div className='App'>
-        <Layout />
-      </div>
+      <Layout />
     </Suspense>
   );
 }

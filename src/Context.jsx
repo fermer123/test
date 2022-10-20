@@ -102,7 +102,6 @@ export const Context = ({ children }) => {
     localStorage.setItem('user', JSON.stringify(resp.data.user));
     setUser(resp.data.user);
     push('/');
-    console.log(resp);
   };
 
   const Logout = () => {

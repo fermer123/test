@@ -1,0 +1,115 @@
+h2 {
+  max-width: 585px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 55px;
+  line-height: 110%;
+}
+.home {
+  width: 1600px;
+  max-width: 100%;
+  margin: 0 auto;
+
+  .home_top {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140%;
+    h2 {
+      margin: 162px 0 45px;
+    }
+
+    .home_text {
+      max-width: 385px;
+      margin-bottom: 52px;
+    }
+    .home_btn {
+      position: relative;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 138.9%;
+      outline: none;
+      border: none;
+      background-color: #6e9c9f;
+      padding: 22px 50px;
+      text-align: center;
+      color: #ffffff;
+      margin-bottom: 306px;
+      margin-left: 90px;
+      &::before {
+        position: absolute;
+        content: '';
+        display: block;
+        left: 0;
+        top: 0;
+        transform: translateX(-100%);
+        width: 67px;
+        height: 67px;
+        background-color: rgba(110, 156, 159, 0.1);
+        background-image: url('../../components/img/Vector.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: 1;
+      }
+    }
+  }
+
+  .home_bot {
+    h2 {
+      margin-bottom: 90px;
+    }
+  }
+  .home_img_back {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 705px;
+    min-height: 826px;
+    background-color: #f1eadc;
+    top: 0;
+    right: 0;
+    z-index: -3;
+  }
+  .home_img {
+    position: absolute;
+    content: '';
+    display: block;
+    background-image: url('../../components/img/home1.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    top: 120px;
+    width: 434px;
+    height: 652px;
+    right: 221px;
+    z-index: -1;
+    &::before {
+      position: absolute;
+      content: '';
+      display: block;
+      background-image: url('../../components/img/home3.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 190px;
+      height: 318px;
+      left: 0px;
+      bottom: 0px;
+      z-index: 1;
+      transform: translateX(-50%) translateY(54px);
+    }
+    &::after {
+      position: absolute;
+      content: '';
+      display: block;
+      background-image: url('../../components/img/home2.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      top: 123px;
+      width: 197px;
+      height: 197px;
+      right: 0px;
+      z-index: 1;
+      transform: translateX(50%);
+    }
+  }
+}
