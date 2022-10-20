@@ -23,12 +23,13 @@ h2 {
       max-width: 385px;
       margin-bottom: 52px;
     }
-    .home_btn {
+    .home_top_btn {
       position: relative;
       font-style: normal;
       font-weight: 400;
       font-size: 17px;
       line-height: 138.9%;
+      letter-spacing: 0.02em;
       outline: none;
       border: none;
       background-color: #6e9c9f;
@@ -58,6 +59,28 @@ h2 {
   .home_bot {
     h2 {
       margin-bottom: 90px;
+    }
+    .any_items {
+      display: flex;
+      flex-direction: row;
+      gap: 30px;
+      margin-bottom: 30px;
+    }
+    .home_bot_btn {
+      color: #6e9c9f;
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 138.9%;
+      text-align: center;
+      letter-spacing: 0.02em;
+      outline: none;
+      padding: 22px 50px;
+      background-color: transparent;
+      border: 1px solid #6e9c9f;
+      display: block;
+      text-align: center;
+      margin: 0 auto;
+      margin-bottom: 130px;
     }
   }
   .home_img_back {
