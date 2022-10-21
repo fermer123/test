@@ -1,0 +1,58 @@
+.shop_link {
+  color: #919191;
+  margin: 26px 0 214px 0;
+  a {
+    text-decoration: none;
+    color: black;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.brand_btn {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  padding: 22px 50px;
+  background-color: #6e9c9f;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 138.9%;
+  border: none;
+  margin-bottom: 130px;
+}
+.brand_top {
+  display: flex;
+  flex-direction: row;
+  gap: 94px;
+  align-items: center;
+  margin-bottom: 130px;
+  img {
+    content: '';
+    display: block;
+    width: 442px;
+    min-height: 547px;
+  }
+  .brand_top_content {
+    .brand_top_content_title {
+      margin-bottom: 46px;
+      text-align: left;
+      font-weight: 500;
+      font-size: 25px;
+      line-height: 140%;
+      letter-spacing: 0.02em;
+      color: #000000;
+    }
+    .brand_top_content_text {
+      text-align: left;
+      font-weight: 500;
+      font-size: 17px;
+      line-height: 140%;
+      letter-spacing: 0.02em;
+      color: #000000;
+    }
+  }
+}
