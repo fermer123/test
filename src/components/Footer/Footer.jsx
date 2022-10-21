@@ -1,7 +1,11 @@
 import { useTranslation } from 'react-i18next';
 import style from './Footer.module.scss';
 import { NavLink } from 'react-router-dom';
-import Logo from '../img/Logo.svg';
+import { ReactComponent as Logo } from '../img/Logo.svg';
+import { ReactComponent as Instagram } from '../img/instagram.svg';
+import { ReactComponent as Facebook } from '../img/facebook.svg';
+import { ReactComponent as Twitter } from '../img/twitter.svg';
+import visa from '../img/visa.png';
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -10,8 +14,9 @@ const Footer = () => {
       <div className={style.footer_container}>
         <ul className={style.list}>
           <li className={style.footer_logo}>
-            <img className={style.logo} src={Logo} />
+            <Logo className={style.logo} src={Logo} alt='logo' />
             <span>womazing</span>
+            <div></div>
           </li>
           <li>
             <NavLink className={style.header_link} to='/'>
@@ -33,9 +38,21 @@ const Footer = () => {
               {t('header.link4')}
             </NavLink>
           </li>
-          <li>
-            <div>+7 (495) 823-54-12</div>
-            <div>hello@womazing.com</div>
+          <li className={style.contact_info}>
+            <p className={style.tel}>+7 (495) 823-54-12</p>
+            <p className={style.email}>hello@womazing.com</p>
+            <ul className={style.svg}>
+              <li>
+                <Instagram />
+              </li>
+              <li>
+                <Facebook />
+              </li>
+              <li>
+                <Twitter />
+              </li>
+            </ul>
+            <img src={visa} />
           </li>
         </ul>
       </div>
