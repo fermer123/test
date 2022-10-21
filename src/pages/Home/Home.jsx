@@ -3,7 +3,9 @@ import { useTranslation } from 'react-i18next';
 import { CustomContext } from '../../Context';
 import Collection from '../Collection/Collection';
 import style from './Home.module.scss';
-
+import { ReactComponent as LogoQuality } from '../../components/img/quality.svg';
+import { ReactComponent as LogoSpeed } from '../../components/img/speed.svg';
+import { ReactComponent as LogoArm } from '../../components/img/arm.svg';
 const Home = () => {
   const { t } = useTranslation();
   const { shop } = useContext(CustomContext);
@@ -38,6 +40,38 @@ const Home = () => {
             ))}
           </div>
           <button className={style.home_bot_btn}>Открыть магазин</button>
+        </div>
+        <div className={style.home_info}>
+          <h2
+            dangerouslySetInnerHTML={{ __html: t('home.firstScreen.title3') }}
+          />
+
+          <div className={style.home_info_block}>
+            <div className={style.home_quality}>
+              <LogoQuality className={style.home_info_block_logo} />
+              <p className={style.home_info_block_title}>Качество</p>
+              <p className={style.home_info_block_text}>
+                Наши профессионалы работают на лучшем оборудовании для пошива
+                одежды беспрецедентного качества
+              </p>
+            </div>
+            <div className={style.home_speed}>
+              <LogoSpeed className={style.home_info_block_logo} />
+              <p className={style.home_info_block_title}>Скорость</p>
+              <p className={style.home_info_block_text}>
+                Благодаря отлаженной системе в Womazing мы можем отшивать до
+                20-ти единиц продукции в наших собственных цехах
+              </p>
+            </div>
+            <div className={style.home_responsibility}>
+              <LogoArm className={style.home_info_block_logo} />
+              <p className={style.home_info_block_title}>Ответственность</p>
+              <p className={style.home_info_block_text}>
+                Мы заботимся о людях и планете. Безотходное производство и
+                комфортные условия труда - все это Womazing
+              </p>
+            </div>
+          </div>
         </div>
       </div>
       <div className={style.home_img_back} />

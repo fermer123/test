@@ -83,6 +83,41 @@ h2 {
       margin-bottom: 130px;
     }
   }
+  .home_info {
+    display: flex;
+    flex-direction: column;
+    h2 {
+      margin-bottom: 90px;
+    }
+
+    .home_info_block {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 75px;
+      text-align: left;
+      .home_quality,
+      .home_responsibility,
+      .home_speed {
+        display: flex;
+        flex-direction: column;
+        .home_info_block_logo {
+          margin-bottom: 37px;
+        }
+        .home_info_block_title {
+          margin-bottom: 24px;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 25px;
+          line-height: 140%;
+          letter-spacing: 0.02em;
+          justify-self: flex-end;
+        }
+        .home_info_block_text {
+          margin: auto 0 0 0;
+        }
+      }
+    }
+  }
   .home_img_back {
     position: absolute;
     content: '';
