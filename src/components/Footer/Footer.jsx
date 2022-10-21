@@ -12,33 +12,37 @@ const Footer = () => {
   return (
     <footer className={style.footer}>
       <div className={style.footer_container}>
-        <ul className={style.list}>
-          <li className={style.footer_logo}>
+        <div className={style.list}>
+          <div className={style.footer_logo}>
             <Logo className={style.logo} src={Logo} alt='logo' />
             <span>womazing</span>
-            <div></div>
-          </li>
-          <li>
-            <NavLink className={style.header_link} to='/'>
-              {t('header.link1')}
-            </NavLink>
-          </li>
-          <li>
-            <NavLink className={style.header_link} to='/shop'>
-              {t('header.link2')}
-            </NavLink>
-          </li>
-          <li>
-            <NavLink className={style.header_link} to='/brands'>
-              {t('header.link3')}
-            </NavLink>
-          </li>
-          <li>
-            <NavLink className={style.header_link} to='/contact'>
-              {t('header.link4')}
-            </NavLink>
-          </li>
-          <li className={style.contact_info}>
+            <div className={style.rights}>
+              © Все права защищены Политика конфиденциальности Публичная оферта
+            </div>
+          </div>
+          <ul className={style.footer_list}>
+            <li>
+              <NavLink className={style.header_link} to='/'>
+                {t('header.link1')}
+              </NavLink>
+            </li>
+            <li>
+              <NavLink className={style.header_link} to='/shop'>
+                {t('header.link2')}
+              </NavLink>
+            </li>
+            <li>
+              <NavLink className={style.header_link} to='/brands'>
+                {t('header.link3')}
+              </NavLink>
+            </li>
+            <li>
+              <NavLink className={style.header_link} to='/contact'>
+                {t('header.link4')}
+              </NavLink>
+            </li>
+          </ul>
+          <div className={style.contact_info}>
             <p className={style.tel}>+7 (495) 823-54-12</p>
             <p className={style.email}>hello@womazing.com</p>
             <ul className={style.svg}>
@@ -53,8 +57,8 @@ const Footer = () => {
               </li>
             </ul>
             <img src={visa} />
-          </li>
-        </ul>
+          </div>
+        </div>
       </div>
     </footer>
   );

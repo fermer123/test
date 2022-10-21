@@ -33,19 +33,13 @@
   line-height: 19px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  &:first-child {
-    margin-right: 146px;
-  }
-  &:last-child {
-    margin-left: 267px;
-  }
   .logo {
     margin-right: 14px;
   }
   .footer_logo {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
     color: #000000;
     letter-spacing: 0.1em;
     text-transform: uppercase;
@@ -53,9 +47,23 @@
     font-weight: 600;
     font-size: 16px;
     line-height: 19px;
+    margin-right: 146px;
+
+    .rights {
+      margin-top: 70px;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 140%;
+      letter-spacing: 0.02em;
+      max-width: 204px;
+      text-align: start;
+      float: left;
+      max-width: 204px;
+    }
   }
   .contact_info {
     text-align: end;
+    margin-left: 267px;
     .tel {
       margin-bottom: 10px;
     }
@@ -70,5 +78,12 @@
       display: flex;
       justify-content: flex-end;
     }
+  }
+  .footer_list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 45px;
   }
 }
