@@ -7,6 +7,7 @@ import { ReactComponent as LogoQuality } from '../../components/img/quality.svg'
 import { ReactComponent as LogoSpeed } from '../../components/img/speed.svg';
 import { ReactComponent as LogoArm } from '../../components/img/arm.svg';
 import team from '../../components/img/team.png';
+import { NavLink } from 'react-router-dom';
 const Home = () => {
   const { t } = useTranslation();
   const { shop } = useContext(CustomContext);
@@ -22,7 +23,9 @@ const Home = () => {
             Утонченные сочетания и бархатные оттенки - вот то, что вы искали в
             этом сезоне. Время исследовать.
           </div>
-          <button className={style.home_top_btn}>Открыть магазин</button>
+          <NavLink to='/shop'>
+            <button className={style.home_top_btn}>Открыть магазин</button>
+          </NavLink>
         </div>
         <div className={style.home_bot}>
           <h2
@@ -40,7 +43,9 @@ const Home = () => {
               />
             ))}
           </div>
-          <button className={style.home_bot_btn}>Открыть магазин</button>
+          <NavLink to='/shop'>
+            <button className={style.home_bot_btn}>Открыть магазин</button>
+          </NavLink>
         </div>
         <div className={style.home_info}>
           <h2
@@ -87,9 +92,11 @@ const Home = () => {
                   Womazing ищет эти мелочи и создает прекрасные вещи, которые
                   выгодно подчеркивают достоинства каждой девушки.
                 </p>
-                <button className={style.home_team_info_btn}>
-                  Подробнее о бренде
-                </button>
+                <NavLink to='/brands'>
+                  <button className={style.home_team_info_btn}>
+                    Подробнее о бренде
+                  </button>
+                </NavLink>
               </div>
             </div>
           </div>

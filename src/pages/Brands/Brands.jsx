@@ -46,7 +46,9 @@ const Brands = () => {
           </p>
         </div>
       </div>
-      <button className={style.brand_btn}>Перейти в магазин</button>
+      <NavLink to='/shop'>
+        <button className={style.brand_btn}>Перейти в магазин</button>
+      </NavLink>
     </div>
   );
 };
