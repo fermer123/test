@@ -95,14 +95,20 @@ h2 {
       grid-template-columns: repeat(3, 1fr);
       grid-gap: 75px;
       text-align: left;
+      margin-bottom: 130px;
       .home_quality,
       .home_responsibility,
       .home_speed {
         display: flex;
         flex-direction: column;
-        .home_info_block_logo {
+        .home_info_block_logo,
+        * {
           margin-bottom: 37px;
+          &:hover {
+            fill: #6e9c9f;
+          }
         }
+
         .home_info_block_title {
           margin-bottom: 24px;
           font-style: normal;
@@ -114,6 +120,72 @@ h2 {
         }
         .home_info_block_text {
           margin: auto 0 0 0;
+        }
+      }
+    }
+  }
+  .home_team {
+    margin-bottom: 130px;
+    h2 {
+      white-space: nowrap;
+      margin-bottom: 90px;
+    }
+    .home_team_block {
+      display: flex;
+      flex-direction: row;
+      gap: 124px;
+      align-items: center;
+      img {
+        max-width: 729px;
+        min-height: 487px;
+        z-index: -1;
+      }
+      .home_team_info {
+        max-width: 255px;
+        position: relative;
+        .home_team_info_title {
+          margin-bottom: 28px;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 25px;
+          line-height: 140%;
+          letter-spacing: 0.02em;
+        }
+        .home_team_info_text {
+          margin-bottom: 28px;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 17px;
+          line-height: 140%;
+          letter-spacing: 0.02em;
+        }
+        .home_team_info_btn {
+          display: block;
+          outline: none;
+          background-color: transparent;
+          border: none;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 17px;
+          line-height: 140%;
+          letter-spacing: 0.02em;
+          color: #6e9c9f;
+        }
+        &::after {
+          position: absolute;
+          content: '';
+          display: block;
+          background-image: url('../../components/img/Vector.svg');
+          min-height: 28px;
+          width: 14px;
+          left: -65px;
+          top: 112px;
+          z-index: 1;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          transform: rotate(-90deg);
+          //передать блок\
         }
       }
     }

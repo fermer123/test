@@ -6,6 +6,7 @@ import style from './Home.module.scss';
 import { ReactComponent as LogoQuality } from '../../components/img/quality.svg';
 import { ReactComponent as LogoSpeed } from '../../components/img/speed.svg';
 import { ReactComponent as LogoArm } from '../../components/img/arm.svg';
+import team from '../../components/img/team.png';
 const Home = () => {
   const { t } = useTranslation();
   const { shop } = useContext(CustomContext);
@@ -70,6 +71,26 @@ const Home = () => {
                 Мы заботимся о людях и планете. Безотходное производство и
                 комфортные условия труда - все это Womazing
               </p>
+            </div>
+          </div>
+          <div className={style.home_team}>
+            <h2
+              dangerouslySetInnerHTML={{ __html: t('home.firstScreen.title4') }}
+            />
+            <div className={style.home_team_block}>
+              <img src={team} alt='team' />
+              <div className={style.home_team_info}>
+                <p className={style.home_team_info_title}>Для каждой</p>
+                <p className={style.home_team_info_text}>
+                  Каждая девушка уникальна. Однако, мы схожи в миллионе мелочей.
+                  <br />
+                  Womazing ищет эти мелочи и создает прекрасные вещи, которые
+                  выгодно подчеркивают достоинства каждой девушки.
+                </p>
+                <button className={style.home_team_info_btn}>
+                  Подробнее о бренде
+                </button>
+              </div>
             </div>
           </div>
         </div>
