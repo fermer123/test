@@ -57,7 +57,7 @@ const Header = () => {
               className={style.login + ' ' + style.header_link}
               to='/profile'
             >
-              profile
+              Профиль
             </NavLink>
           ) : (
             <NavLink

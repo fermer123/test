@@ -14,8 +14,10 @@ const Footer = () => {
       <div className={style.footer_container}>
         <div className={style.list}>
           <div className={style.footer_logo}>
-            <Logo className={style.logo} src={Logo} alt='logo' />
-            <span>womazing</span>
+            <div>
+              <Logo className={style.logo} src={Logo} alt='logo' />
+              <span>womazing</span>
+            </div>
             <div className={style.rights}>
               © Все права защищены Политика конфиденциальности Публичная оферта
             </div>
