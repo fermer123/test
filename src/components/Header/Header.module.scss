@@ -43,6 +43,23 @@
 
 .cart {
   margin-left: 47px;
+  display: inline;
+  position: relative;
+  .cart_count {
+    position: absolute;
+    top: -19px;
+    right: -10px;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background-color: #998e78;
+    font-weight: 400;
+    font-size: 9px;
+    line-height: 100%;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+  }
 }
 .header_link {
   text-decoration: none;

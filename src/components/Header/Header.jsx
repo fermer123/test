@@ -9,13 +9,13 @@ import { CustomContext } from '../../Context';
 
 const Header = () => {
   const { t } = useTranslation();
-  const { user, Logout } = useContext(CustomContext);
+  const { user } = useContext(CustomContext);
 
   return (
     <div className='container'>
       <div className={style.header}>
         <div>
-          <img className={style.logo} src={Logo} />
+          <img className={style.logo} src={Logo} alt='logo' />
           Womazing
         </div>
         <ul className={style.list}>
@@ -42,14 +42,14 @@ const Header = () => {
         </ul>
         <div>
           <a className={style.call} href='tel:+7 (495) 823-54-12'>
-            <img className={style.header_link} src={call} />
+            <img className={style.header_link} src={call} alt='call' />
             +7 (495) 823-54-12
           </a>
           <NavLink to='/cart'>
-            <img
-              className={style.cart + ' ' + style.header_link}
-              src={basket}
-            />
+            <div className={style.cart + ' ' + style.header_link}>
+              <img src={basket} alt='cart' />
+              <div className={style.cart_count}>1</div>
+            </div>
           </NavLink>
 
           {!!user.login ? (
