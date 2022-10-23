@@ -91,6 +91,7 @@ const Product = () => {
           </ul>
           <div className={style.product_quantity}>
             <input
+              type='number'
               onChange={(e) => setCount(e.target.value)}
               className={style.product_quantity_input}
               value={count}

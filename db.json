@@ -138,7 +138,7 @@
       "image": "img/kup.png",
       "category": "t-shirt",
       "size": ["s", "m", "l", "xl"],
-      "color": ["blue", "white"],
+      "color": ["blue", "#927876"],
       "inStock": 39
     },
     {

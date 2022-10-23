@@ -26,6 +26,7 @@ const CartItem = ({ id, size, color, title, price, image, count }) => {
       <input
         className={style.count}
         value={count}
+        type='number'
         onChange={(e) => {
           setCount(e.target.value);
           updateItem(id, color, size, e.target.value);

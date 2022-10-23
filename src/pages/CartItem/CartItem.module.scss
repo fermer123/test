@@ -4,7 +4,11 @@
   justify-content: space-between;
   max-height: 205px;
   margin-bottom: 72px;
-
+  input[type='number']::-webkit-outer-spin-button,
+  input[type='number']::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
   .delete {
     position: relative;
     cursor: pointer;
