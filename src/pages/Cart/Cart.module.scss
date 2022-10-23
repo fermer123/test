@@ -7,6 +7,44 @@ a {
 }
 .cart {
   margin-bottom: 130px;
+  .cupon {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 90px;
+    input {
+      position: relative;
+      outline: none;
+      border: none;
+      border-bottom: 1px solid #000000;
+      max-width: 255px;
+      text-align: start;
+      margin-right: 16px;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 140%;
+      letter-spacing: 0.02em;
+      color: #000000;
+      &::placeholder {
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 140%;
+        letter-spacing: 0.02em;
+        color: #868686;
+      }
+    }
+    .cupon_btn {
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 138.9%;
+      text-align: center;
+      letter-spacing: 0.02em;
+      color: #6e9c9f;
+      padding: 22px 50px;
+      outline: none;
+      border: 1px solid #6e9c9f;
+      background-color: transparent;
+    }
+  }
   .shop_link {
     margin-bottom: 214px;
   }

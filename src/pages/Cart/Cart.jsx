@@ -32,6 +32,13 @@ const Cart = () => {
             count={e.count}
           />
         ))}
+        <div className={style.cupon}>
+          <input placeholder='Введите купон' />
+          <button style={{ marginRight: '337px' }} className={style.cupon_btn}>
+            Применить купон
+          </button>
+          <button className={style.cupon_btn}>Обновить корзину</button>
+        </div>
         <div className={style.end_info}>
           <div className={style.end_price}>
             <div className={style.end_price_text}>Итого:</div>
