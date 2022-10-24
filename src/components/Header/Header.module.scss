@@ -47,6 +47,9 @@
   position: relative;
   .cart_count {
     position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     top: -19px;
     right: -10px;
     border-radius: 50%;
@@ -54,9 +57,9 @@
     height: 15px;
     background-color: #998e78;
     font-weight: 400;
-    font-size: 9px;
+    font-size: 10px;
     line-height: 100%;
-    text-align: center;
+
     letter-spacing: 0.02em;
     color: #ffffff;
   }
