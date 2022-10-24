@@ -6,11 +6,17 @@ import basket from '../img/basket.svg';
 import { useTranslation } from 'react-i18next';
 import { useContext } from 'react';
 import { CustomContext } from '../../Context';
+import { useMemo } from 'react';
 
 const Header = () => {
   const { t } = useTranslation();
-  const { user } = useContext(CustomContext);
-
+  const { user, cart } = useContext(CustomContext);
+  const sumProduct = () => {
+    return cart.reduce((acc, rec) => acc + rec.count, 0);
+  };
+  useMemo(() => {
+    sumProduct();
+  }, cart.count);
   return (
     <div className='container'>
       <div className={style.header}>
@@ -48,7 +54,7 @@ const Header = () => {
           <NavLink to='/cart'>
             <div className={style.cart + ' ' + style.header_link}>
               <img src={basket} alt='cart' />
-              <div className={style.cart_count}>1</div>
+              <div className={style.cart_count}>{sumProduct()}</div>
             </div>
           </NavLink>
 
