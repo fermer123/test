@@ -7,10 +7,12 @@ a {
 }
 .cart {
   margin-bottom: 130px;
+
   .cupon {
     display: flex;
     flex-direction: row;
     margin-bottom: 90px;
+    position: relative;
     input {
       position: relative;
       outline: none;
@@ -43,6 +45,19 @@ a {
       outline: none;
       border: 1px solid #6e9c9f;
       background-color: transparent;
+    }
+    .cupon_error {
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: -50px;
+      border-bottom: 1px solid red;
+      color: red;
+      max-width: 1100px;
+      font-size: 17px;
+      line-height: 138.9%;
+      text-align: center;
+      letter-spacing: 0.02em;
     }
   }
   .shop_link {

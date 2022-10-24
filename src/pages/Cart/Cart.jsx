@@ -70,6 +70,9 @@ const Cart = () => {
             Применить купон
           </button>
           <button className={style.cupon_btn}>Обновить корзину</button>
+          {ticket.length ? null : (
+            <p className={style.cupon_error}>Введите купон</p>
+          )}
         </div>
         <div className={style.end_info}>
           <div className={style.end_price}>
