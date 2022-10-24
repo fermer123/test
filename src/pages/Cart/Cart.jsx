@@ -3,10 +3,38 @@ import { NavLink } from 'react-router-dom';
 import style from './Cart.module.scss';
 import { CustomContext } from '../../Context';
 import CartItem from '../CartItem/CartItem';
+import { useState } from 'react';
+import { useInput } from '../../components/input/input';
+import axios from 'axios';
 
 const Cart = () => {
   const { cart } = useContext(CustomContext);
+  const [ticket, setTicket] = useState([]);
+  const [error, setError] = useState('');
+  const input = useInput('');
 
+  const useTicket = async (e) => {
+    e.preventDefault();
+    if (input.value.length > 0) {
+      try {
+        const resp = await axios.get(
+          `http://localhost:8080/tickets?title=${input.value}`,
+        );
+        setTicket(resp.data);
+      } catch (e) {
+        console.log(e);
+        setError(e);
+      }
+    } else {
+      throw new Error('Поле не может быть пустым, введите значение');
+    }
+  };
+  const endPrice = () => {
+    return Number(cart.reduce((acc, val) => acc + val.price * val.count, 0));
+  };
+  console.log(endPrice() / 100);
+
+  console.log(ticket);
   return (
     <div className='container'>
       <div className={style.cart}>
@@ -33,8 +61,12 @@ const Cart = () => {
           />
         ))}
         <div className={style.cupon}>
-          <input placeholder='Введите купон' />
-          <button style={{ marginRight: '337px' }} className={style.cupon_btn}>
+          <input placeholder='Введите купон' {...input} />
+          <button
+            onClick={useTicket}
+            style={{ marginRight: '337px' }}
+            className={style.cupon_btn}
+          >
             Применить купон
           </button>
           <button className={style.cupon_btn}>Обновить корзину</button>
@@ -43,7 +75,10 @@ const Cart = () => {
           <div className={style.end_price}>
             <div className={style.end_price_text}>Итого:</div>
             <div className={style.end_price_price}>
-              $ {cart.reduce((acc, val) => acc + val.price * val.count, 0)}
+              ${' '}
+              {ticket.length
+                ? (endPrice() / 100) * (100 - ticket[0].sum)
+                : endPrice()}
             </div>
           </div>
           <button className={style.end_info_btn}>Оформить заказ</button>
