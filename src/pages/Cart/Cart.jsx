@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import style from './Cart.module.scss';
 import { CustomContext } from '../../Context';
 import CartItem from '../CartItem/CartItem';
@@ -11,7 +11,7 @@ import { useMemo } from 'react';
 const Cart = () => {
   const { cart } = useContext(CustomContext);
   const [ticket, setTicket] = useState([]);
-
+  const push = useNavigate();
   const input = useInput('');
 
   const useTicket = async (e) => {
@@ -82,7 +82,14 @@ const Cart = () => {
                 : endPrice}
             </div>
           </div>
-          <button className={style.end_info_btn}>Оформить заказ</button>
+          <button
+            onClick={() => {
+              push('/ordering');
+            }}
+            className={style.end_info_btn}
+          >
+            Оформить заказ
+          </button>
         </div>
       </div>
     </div>
