@@ -6,11 +6,11 @@ import CartItem from '../CartItem/CartItem';
 import { useState } from 'react';
 import { useInput } from '../../components/input/input';
 import axios from 'axios';
+import { useMemo } from 'react';
 
 const Cart = () => {
   const { cart } = useContext(CustomContext);
   const [ticket, setTicket] = useState([]);
-  const [error, setError] = useState('');
   const input = useInput('');
 
   const useTicket = async (e) => {
@@ -22,13 +22,13 @@ const Cart = () => {
         );
         setTicket(resp.data);
       } catch (e) {
-        setError(e.message);
+        console.log(e.message);
       }
     }
   };
-  const endPrice = () => {
+  const endPrice = useMemo(() => {
     return Number(cart.reduce((acc, val) => acc + val.price * val.count, 0));
-  };
+  }, [cart]);
 
   return (
     <div className='container'>
@@ -75,8 +75,8 @@ const Cart = () => {
             <div className={style.end_price_price}>
               ${' '}
               {ticket.length
-                ? (endPrice() / 100) * (100 - ticket[0].sum)
-                : endPrice()}
+                ? (endPrice / 100) * (100 - ticket[0].sum)
+                : endPrice}
             </div>
           </div>
           <button className={style.end_info_btn}>Оформить заказ</button>
