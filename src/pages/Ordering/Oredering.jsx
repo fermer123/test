@@ -1,6 +1,8 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import style from './Oredering.module.scss';
 import { useInput } from '../../components/input/input';
+import { useContext, useMemo } from 'react';
+import { CustomContext } from '../../Context';
 
 const Oredering = () => {
   const name = useInput();
@@ -12,7 +14,12 @@ const Oredering = () => {
   const house = useInput();
   const apartment = useInput();
   const commets = useInput();
+  const { cart } = useContext(CustomContext);
+  const push = useNavigate();
 
+  const endPrice = useMemo(() => {
+    return Number(cart.reduce((acc, val) => acc + val.price * val.count, 0));
+  }, [cart]);
   return (
     <div className='container'>
       <h2 style={{ marginBottom: '26px', maxWidth: '100%' }} className='title'>
@@ -49,13 +56,15 @@ const Oredering = () => {
               <p>Товар</p>
               <p>всего</p>
             </li>
-            <li>
-              <p>футболка usa</p>
-              <p>1$</p>
-            </li>
+            {cart.map((e) => (
+              <li key={e.id} onClick={() => push(`/product/${e.id}`)}>
+                <p>{e.title}</p>
+                <p>{e.price} $</p>
+              </li>
+            ))}
             <li>
               <p>Подытог</p>
-              <p>129$</p>
+              <p>{endPrice} $</p>
             </li>
             <li>
               <p>Итог</p>
