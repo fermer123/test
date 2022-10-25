@@ -14,12 +14,28 @@ const Oredering = () => {
   const house = useInput();
   const apartment = useInput();
   const commets = useInput();
-  const { cart } = useContext(CustomContext);
+  const { cart, ticket, setTicket } = useContext(CustomContext);
   const push = useNavigate();
 
   const endPrice = useMemo(() => {
     return Number(cart.reduce((acc, val) => acc + val.price * val.count, 0));
   }, [cart]);
+
+  const addOrder = () => (
+    {
+      name: name.value,
+      email: email.value,
+      number: number.value,
+      country: country.value,
+      city: city.value,
+      street: street.value,
+      house: house.value,
+      apartment: apartment.value,
+      commets: commets.value,
+    },
+    push('/')
+  );
+
   return (
     <div className='container'>
       <h2 style={{ marginBottom: '26px', maxWidth: '100%' }} className='title'>
@@ -57,7 +73,11 @@ const Oredering = () => {
               <p>всего</p>
             </li>
             {cart.map((e) => (
-              <li key={e.id} onClick={() => push(`/product/${e.id}`)}>
+              <li
+                style={{ backgroundColor: e.color }}
+                key={e.id}
+                onClick={() => push(`/product/${e.id}`)}
+              >
                 <p>{e.title}</p>
                 <p>{e.price} $</p>
               </li>
@@ -68,14 +88,19 @@ const Oredering = () => {
             </li>
             <li>
               <p>Итог</p>
-              <p>129$</p>
+              <p>
+                {Array.isArray(ticket) && ticket.length
+                  ? (endPrice / 100) * (100 - ticket[0].sum)
+                  : endPrice}
+                $
+              </p>
             </li>
           </ul>
           <div className={style.pay_method}>
             <h3>Способ оплаты</h3>
             <input type='checkbox' />
             <span>Оплата наличными</span>
-            <button>Разместить заказ</button>
+            <button onClick={addOrder}>Разместить заказ</button>
           </div>
         </div>
       </div>

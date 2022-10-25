@@ -9,8 +9,8 @@ import axios from 'axios';
 import { useMemo } from 'react';
 
 const Cart = () => {
-  const { cart } = useContext(CustomContext);
-  const [ticket, setTicket] = useState([]);
+  const { cart, ticket, setTicket } = useContext(CustomContext);
+
   const push = useNavigate();
   const input = useInput('');
 

@@ -15,6 +15,7 @@ export const Context = ({ children }) => {
   const [status, setStatus] = useState('all');
   const [cart, setCart] = useState([]);
   const [count, setCount] = useState(1);
+  const [ticket, setTicket] = useState([]);
 
   useEffect(() => {
     if (localStorage.getItem('user') !== null) {
@@ -128,6 +129,8 @@ export const Context = ({ children }) => {
     count,
     setCount,
     updateItem,
+    ticket,
+    setTicket,
   };
 
   return (
