@@ -22,19 +22,14 @@ const Cart = () => {
         );
         setTicket(resp.data);
       } catch (e) {
-        console.log(e);
-        setError(e);
+        setError(e.message);
       }
-    } else {
-      throw new Error('Поле не может быть пустым, введите значение');
     }
   };
   const endPrice = () => {
     return Number(cart.reduce((acc, val) => acc + val.price * val.count, 0));
   };
-  console.log(endPrice() / 100);
 
-  console.log(ticket);
   return (
     <div className='container'>
       <div className={style.cart}>

@@ -11,12 +11,11 @@ import { useMemo } from 'react';
 const Header = () => {
   const { t } = useTranslation();
   const { user, cart } = useContext(CustomContext);
-  const sumProduct = () => {
+
+  const sumProduct = useMemo(() => {
     return cart.reduce((acc, rec) => acc + rec.count, 0);
-  };
-  useMemo(() => {
-    sumProduct();
-  }, cart.count);
+  }, [cart]);
+
   return (
     <div className='container'>
       <div className={style.header}>
@@ -54,7 +53,7 @@ const Header = () => {
           <NavLink to='/cart'>
             <div className={style.cart + ' ' + style.header_link}>
               <img src={basket} alt='cart' />
-              <div className={style.cart_count}>{sumProduct()}</div>
+              <div className={style.cart_count}>{sumProduct}</div>
             </div>
           </NavLink>
 
