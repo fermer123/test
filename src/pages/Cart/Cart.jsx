@@ -11,6 +11,7 @@ import { useMemo } from 'react';
 const Cart = () => {
   const { cart } = useContext(CustomContext);
   const [ticket, setTicket] = useState([]);
+
   const input = useInput('');
 
   const useTicket = async (e) => {
@@ -22,7 +23,7 @@ const Cart = () => {
         );
         setTicket(resp.data);
       } catch (e) {
-        console.log(e.message);
+        setTicket(e.message);
       }
     }
   };
@@ -65,16 +66,18 @@ const Cart = () => {
             Применить купон
           </button>
           <button className={style.cupon_btn}>Обновить корзину</button>
-          {ticket.length ? null : (
-            <p className={style.cupon_error}>Введите купон</p>
-          )}
+          {input.value.length ? (
+            ticket[0]?.sum ? null : (
+              <p className={style.cupon_error}>такого купона не сущетсвует</p>
+            )
+          ) : null}
         </div>
         <div className={style.end_info}>
           <div className={style.end_price}>
             <div className={style.end_price_text}>Итого:</div>
             <div className={style.end_price_price}>
               ${' '}
-              {ticket.length
+              {Array.isArray(ticket) && ticket.length
                 ? (endPrice / 100) * (100 - ticket[0].sum)
                 : endPrice}
             </div>
