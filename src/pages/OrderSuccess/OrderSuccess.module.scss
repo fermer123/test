@@ -1,0 +1,33 @@
+a {
+  text-decoration: none;
+  color: #919191;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.order_success {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 130px;
+  .logo {
+    margin-right: 36px;
+    margin-left: -12px;
+  }
+  .order_success_text {
+    .order_success_text_1 {
+      font-weight: 500;
+      font-size: 25px;
+      line-height: 140%;
+      letter-spacing: 0.02em;
+      color: #000000;
+      margin-bottom: 17px;
+    }
+    .order_success_text_2 {
+      font-weight: 500;
+      font-size: 17px;
+      line-height: 140%;
+      letter-spacing: 0.02em;
+      color: #000000;
+    }
+  }
+}

@@ -33,7 +33,7 @@ const Oredering = () => {
       apartment: apartment.value,
       commets: commets.value,
     },
-    push('/')
+    push('/success')
   );
 
   return (

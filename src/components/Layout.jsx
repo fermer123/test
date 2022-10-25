@@ -12,6 +12,7 @@ import Register from '../pages/Register/Register';
 import Profile from '../pages/Profile/Profile';
 import Product from '../pages/Product/Product';
 import Oredering from '../pages/Ordering/Oredering';
+import OrderSuccess from '../pages/OrderSuccess/OrderSuccess';
 
 const Layout = () => {
   const location = useLocation();
@@ -34,6 +35,7 @@ const Layout = () => {
         <Route path='/register' element={<Register />} />
         <Route path='/profile' element={<Profile />} />
         <Route path='/ordering' element={<Oredering />} />
+        <Route path='/success' element={<OrderSuccess />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
       {location.pathname === '/login' || location.pathname === '/register' ? (
