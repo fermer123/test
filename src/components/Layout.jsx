@@ -11,6 +11,7 @@ import Login from '../pages/Login/Login';
 import Register from '../pages/Register/Register';
 import Profile from '../pages/Profile/Profile';
 import Product from '../pages/Product/Product';
+import Oredering from '../pages/Ordering/Oredering';
 
 const Layout = () => {
   const location = useLocation();
@@ -32,6 +33,7 @@ const Layout = () => {
         <Route path='/login' element={<Login />} />
         <Route path='/register' element={<Register />} />
         <Route path='/profile' element={<Profile />} />
+        <Route path='/ordering' element={<Oredering />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
       {location.pathname === '/login' || location.pathname === '/register' ? (
