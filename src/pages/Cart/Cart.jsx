@@ -6,10 +6,9 @@ import CartItem from '../CartItem/CartItem';
 import { useState } from 'react';
 import { useInput } from '../../components/input/input';
 import axios from 'axios';
-import { useMemo } from 'react';
 
 const Cart = () => {
-  const { cart, ticket, setTicket } = useContext(CustomContext);
+  const { cart, ticket, setTicket, endPrice } = useContext(CustomContext);
 
   const push = useNavigate();
   const input = useInput('');
@@ -27,9 +26,6 @@ const Cart = () => {
       }
     }
   };
-  const endPrice = useMemo(() => {
-    return Number(cart.reduce((acc, val) => acc + val.price * val.count, 0));
-  }, [cart]);
 
   return (
     <div className='container'>

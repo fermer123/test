@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { useEffect } from 'react';
+import { useEffect, useMemo } from 'react';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 const { createContext } = require('react');
@@ -25,13 +25,17 @@ export const Context = ({ children }) => {
     if (localStorage.getItem('cart') !== null) {
       setCart(JSON.parse(localStorage.getItem('cart')));
     }
-    const clothes = axios
+    axios
       .get('http://localhost:8080/clothes')
       .then(({ data }) => setShop(data));
   }, []);
 
   useEffect(() => {
     localStorage.setItem('cart', JSON.stringify(cart));
+  }, [cart]);
+
+  const endPrice = useMemo(() => {
+    return Number(cart.reduce((acc, val) => acc + val.price * val.count, 0));
   }, [cart]);
 
   const addCart = (item) => {
@@ -64,6 +68,17 @@ export const Context = ({ children }) => {
     } else {
       setCart([...cart, item]);
     }
+  };
+
+  const addOrder = async (data) => {
+    await axios.post('http://localhost:8080/orders', {
+      ...data,
+      clothes: cart,
+      price:
+        Array.isArray(ticket) && ticket.length
+          ? (endPrice / 100) * (100 - ticket[0].sum)
+          : endPrice,
+    });
   };
 
   const updateItem = (id, color, size, count) => {
@@ -131,6 +146,8 @@ export const Context = ({ children }) => {
     updateItem,
     ticket,
     setTicket,
+    addOrder,
+    endPrice,
   };
 
   return (

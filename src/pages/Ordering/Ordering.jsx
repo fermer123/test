@@ -5,6 +5,8 @@ import { useContext, useMemo } from 'react';
 import { CustomContext } from '../../Context';
 
 const Oredering = () => {
+  const { cart, ticket, addOrder, endPrice } = useContext(CustomContext);
+
   const name = useInput();
   const email = useInput();
   const number = useInput();
@@ -14,28 +16,19 @@ const Oredering = () => {
   const house = useInput();
   const apartment = useInput();
   const commets = useInput();
-  const { cart, ticket, setTicket } = useContext(CustomContext);
   const push = useNavigate();
 
-  const endPrice = useMemo(() => {
-    return Number(cart.reduce((acc, val) => acc + val.price * val.count, 0));
-  }, [cart]);
-
-  const addOrder = () => (
-    {
-      name: name.value,
-      email: email.value,
-      number: number.value,
-      country: country.value,
-      city: city.value,
-      street: street.value,
-      house: house.value,
-      apartment: apartment.value,
-      commets: commets.value,
-    },
-    push('/success')
-  );
-  console.log(addOrder());
+  const info = {
+    name: name.value,
+    email: email.value,
+    number: number.value,
+    country: country.value,
+    city: city.value,
+    street: street.value,
+    house: house.value,
+    apartment: apartment.value,
+    commets: commets.value,
+  };
 
   return (
     <div className='container'>
@@ -101,7 +94,27 @@ const Oredering = () => {
             <h3>Способ оплаты</h3>
             <input type='checkbox' />
             <span>Оплата наличными</span>
-            <button onClick={addOrder}>Разместить заказ</button>
+            <button
+              disabled={
+                name.value &&
+                email.value &&
+                number.value &&
+                country.value &&
+                city.value &&
+                street.value &&
+                house.value &&
+                apartment.value &&
+                commets.value !== ''
+                  ? false
+                  : true
+              }
+              onClick={() => {
+                addOrder(info);
+                push('/success');
+              }}
+            >
+              Разместить заказ
+            </button>
           </div>
         </div>
       </div>
