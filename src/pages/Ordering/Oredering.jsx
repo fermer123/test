@@ -35,6 +35,7 @@ const Oredering = () => {
     },
     push('/success')
   );
+  console.log(addOrder());
 
   return (
     <div className='container'>
