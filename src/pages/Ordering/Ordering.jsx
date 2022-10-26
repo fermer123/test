@@ -1,21 +1,21 @@
 import { NavLink, useNavigate } from 'react-router-dom';
 import style from './Ordering.module.scss';
 import { useInput } from '../../components/input/input';
-import { useContext, useMemo } from 'react';
+import { useContext } from 'react';
 import { CustomContext } from '../../Context';
 
 const Oredering = () => {
-  const { cart, ticket, addOrder, endPrice } = useContext(CustomContext);
+  const { cart, ticket, addOrder, endPrice, user } = useContext(CustomContext);
 
   const name = useInput();
-  const email = useInput();
-  const number = useInput();
-  const country = useInput();
-  const city = useInput();
+  const email = useInput(user.email);
+  const number = useInput(user.phone);
+  const country = useInput('Russia');
+  const city = useInput('Chelyabinsk');
   const street = useInput();
   const house = useInput();
   const apartment = useInput();
-  const commets = useInput();
+  const commets = useInput('All is good');
   const push = useNavigate();
 
   const info = {
@@ -110,7 +110,6 @@ const Oredering = () => {
               }
               onClick={() => {
                 addOrder(info);
-                push('/success');
               }}
             >
               Разместить заказ
