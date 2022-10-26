@@ -71,17 +71,27 @@ export const Context = ({ children }) => {
   };
 
   const addOrder = async (data) => {
-    await axios
-      .post('http://localhost:8080/orders', {
-        ...data,
+    await axios.post('http://localhost:8080/orders', {
+      ...data,
+      clothes: cart,
+      price:
+        Array.isArray(ticket) && ticket.length
+          ? (endPrice / 100) * (100 - ticket[0].sum)
+          : endPrice,
+      userEmail: user,
+    });
+
+    await axios.patch(`http://localhost:8080/users/${user.id}`, {
+      orders: {
         clothes: cart,
         price:
           Array.isArray(ticket) && ticket.length
             ? (endPrice / 100) * (100 - ticket[0].sum)
             : endPrice,
-        userEmail: user,
-      })
-      .then(() => push('/success'));
+      },
+    });
+    setCart([]);
+    push('/success');
   };
 
   const updateItem = (id, color, size, count) => {

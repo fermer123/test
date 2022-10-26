@@ -3,7 +3,6 @@ import { NavLink, useNavigate } from 'react-router-dom';
 import style from './Cart.module.scss';
 import { CustomContext } from '../../Context';
 import CartItem from '../CartItem/CartItem';
-import { useState } from 'react';
 import { useInput } from '../../components/input/input';
 import axios from 'axios';
 
