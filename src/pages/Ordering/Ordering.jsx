@@ -1,5 +1,5 @@
 import { NavLink, useNavigate } from 'react-router-dom';
-import style from './Oredering.module.scss';
+import style from './Ordering.module.scss';
 import { useInput } from '../../components/input/input';
 import { useContext, useMemo } from 'react';
 import { CustomContext } from '../../Context';

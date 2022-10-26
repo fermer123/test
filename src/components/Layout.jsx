@@ -11,7 +11,7 @@ import Login from '../pages/Login/Login';
 import Register from '../pages/Register/Register';
 import Profile from '../pages/Profile/Profile';
 import Product from '../pages/Product/Product';
-import Oredering from '../pages/Ordering/Oredering';
+import Ordering from '../pages/Ordering/Ordering';
 import OrderSuccess from '../pages/OrderSuccess/OrderSuccess';
 
 const Layout = () => {
@@ -34,7 +34,7 @@ const Layout = () => {
         <Route path='/login' element={<Login />} />
         <Route path='/register' element={<Register />} />
         <Route path='/profile' element={<Profile />} />
-        <Route path='/ordering' element={<Oredering />} />
+        <Route path='/ordering' element={<Ordering />} />
         <Route path='/success' element={<OrderSuccess />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
