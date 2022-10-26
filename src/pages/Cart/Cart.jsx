@@ -73,7 +73,7 @@ const Cart = () => {
             <div className={style.end_price_price}>
               ${' '}
               {Array.isArray(ticket) && ticket.length
-                ? (endPrice / 100) * (100 - ticket[0].sum)
+                ? Math.ceil((endPrice / 100) * (100 - ticket[0].sum))
                 : endPrice}
             </div>
           </div>

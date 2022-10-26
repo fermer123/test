@@ -79,17 +79,19 @@ export const Context = ({ children }) => {
           ? (endPrice / 100) * (100 - ticket[0].sum)
           : endPrice,
       userEmail: user,
+      date: new Date(),
     });
 
     await axios.patch(`http://localhost:8080/users/${user.id}`, {
       orders: [
-        ...user.orders,
+        ...user,
         {
           clothes: cart,
           price:
             Array.isArray(ticket) && ticket.length
               ? (endPrice / 100) * (100 - ticket[0].sum)
               : endPrice,
+          date: new Date(),
         },
       ],
     });
