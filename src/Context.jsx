@@ -82,13 +82,16 @@ export const Context = ({ children }) => {
     });
 
     await axios.patch(`http://localhost:8080/users/${user.id}`, {
-      orders: {
-        clothes: cart,
-        price:
-          Array.isArray(ticket) && ticket.length
-            ? (endPrice / 100) * (100 - ticket[0].sum)
-            : endPrice,
-      },
+      orders: [
+        ...user.orders,
+        {
+          clothes: cart,
+          price:
+            Array.isArray(ticket) && ticket.length
+              ? (endPrice / 100) * (100 - ticket[0].sum)
+              : endPrice,
+        },
+      ],
     });
     setCart([]);
     push('/success');
