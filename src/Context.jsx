@@ -79,23 +79,29 @@ export const Context = ({ children }) => {
           ? (endPrice / 100) * (100 - ticket[0].sum)
           : endPrice,
       userEmail: user,
-      date: new Date(),
+      date: new Date().toLocaleDateString(),
     });
 
     await axios.patch(`http://localhost:8080/users/${user.id}`, {
       orders: [
-        ...user,
+        ...user.orders,
         {
           clothes: cart,
           price:
             Array.isArray(ticket) && ticket.length
               ? (endPrice / 100) * (100 - ticket[0].sum)
               : endPrice,
-          date: new Date(),
+          date: new Date().toLocaleDateString(),
         },
       ],
     });
+    //не забыть обновить юзера
+    await axios
+      .get(`http://localhost:8080/users/${user.id}`)
+      .then((e) => setUser(e.data));
+
     setCart([]);
+    setTicket([]);
     push('/success');
   };
 

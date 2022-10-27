@@ -28,6 +28,12 @@
       "title": "somebody",
       "sum": 3,
       "count": 7
+    },
+    {
+      "id": 4,
+      "title": "qwe",
+      "sum": 50,
+      "count": 1
     }
   ],
   "clothes": [
