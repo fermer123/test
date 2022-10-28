@@ -69,7 +69,7 @@ const Header = () => {
               className={style.login + ' ' + style.header_link}
               to='/register'
             >
-              login
+              Войти
             </NavLink>
           )}
         </div>

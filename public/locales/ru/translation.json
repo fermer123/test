@@ -12,5 +12,10 @@
       "title3": "Что важно для нас",
       "title4": "Команда мечты Womazing"
     }
+  },
+  "profile": {
+    "firstScreen": {
+      "title": "Профиль"
+    }
   }
 }

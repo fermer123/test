@@ -12,5 +12,10 @@
       "title3": "What is important for us",
       "title4": "Womazing dream team"
     }
+  },
+  "profile": {
+    "firstScreen": {
+      "title": "Profile"
+    }
   }
 }
