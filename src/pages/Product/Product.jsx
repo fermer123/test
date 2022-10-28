@@ -6,6 +6,8 @@ import { useContext, useEffect } from 'react';
 import { useState } from 'react';
 import { CustomContext } from '../../Context';
 import Collection from '../Collection/Collection';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const Product = () => {
   const params = useParams();
@@ -42,11 +44,13 @@ const Product = () => {
       </div>
 
       <div className={style.product_main}>
-        <img
+        <LazyLoadImage
+          effect='blur'
           className={style.product_img}
           src={`../${product.image}`}
           alt={product.title}
         />
+
         <div className={style.product_info}>
           <div className={style.product_price}>
             <div className={style.product_price_new}>${product.price}</div>

@@ -2,6 +2,8 @@ import { NavLink } from 'react-router-dom';
 import style from './Brands.module.scss';
 import brand1 from '../../components/img/brand1.png';
 import brand2 from '../../components/img/brand2.png';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const Brands = () => {
   return (
@@ -11,7 +13,7 @@ const Brands = () => {
         <NavLink to='/'>Главная</NavLink> - О бренде
       </div>
       <div className={style.brand_top}>
-        <img src={brand1} alt='brand1' />
+        <LazyLoadImage effect='blur' src={brand1} alt='brand1' />
         <div className={style.brand_top_content}>
           <p className={style.brand_top_content_title}>Идея и женщина</p>
           <p className={style.brand_top_content_text}>
@@ -29,7 +31,7 @@ const Brands = () => {
         </div>
       </div>
       <div style={{ flexDirection: 'row-reverse' }} className={style.brand_top}>
-        <img src={brand2} alt='brand2' />
+        <LazyLoadImage effect='blur' src={brand2} alt='brand2' />
         <div className={style.brand_top_content}>
           <p className={style.brand_top_content_title}>Магия в деталях</p>
           <p className={style.brand_top_content_text}>

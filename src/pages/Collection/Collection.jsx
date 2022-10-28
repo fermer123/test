@@ -1,12 +1,19 @@
 import { NavLink } from 'react-router-dom';
 import style from './Collection.module.scss';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const Collection = ({ img, title, price, oldPrice, id }) => {
   return (
     <div className='container' id={id}>
       <div className={style.collection}>
         <NavLink to={`/product/${id}`}>
-          <img className={style.collection_img} alt={title} src={img} />
+          <LazyLoadImage
+            className={style.collection_img}
+            alt={title}
+            src={img}
+            effect='blur'
+          />
         </NavLink>
         <div className={style.collection_title}>{title}</div>
         <div>

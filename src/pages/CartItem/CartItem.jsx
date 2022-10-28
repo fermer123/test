@@ -1,4 +1,5 @@
 import { useContext } from 'react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { NavLink } from 'react-router-dom';
 import { CustomContext } from '../../Context';
 import style from './CartItem.module.scss';
@@ -16,7 +17,12 @@ const CartItem = ({ id, size, color, title, price, image, count }) => {
           className={style.delete}
         ></div>
         <NavLink to={`/product/${id}`}>
-          <img className={style.img} src={`../${image}`} alt={image} />
+          <LazyLoadImage
+            effect='blur'
+            alt={image}
+            src={`../${image}`}
+            className={style.img}
+          />
         </NavLink>
         <div className={style.name}>{title}</div>
       </div>

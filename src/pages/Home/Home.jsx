@@ -8,6 +8,9 @@ import { ReactComponent as LogoSpeed } from '../../components/img/speed.svg';
 import { ReactComponent as LogoArm } from '../../components/img/arm.svg';
 import team from '../../components/img/team.png';
 import { NavLink } from 'react-router-dom';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
+
 const Home = () => {
   const { t } = useTranslation();
   const { shop } = useContext(CustomContext);
@@ -83,7 +86,7 @@ const Home = () => {
               dangerouslySetInnerHTML={{ __html: t('home.firstScreen.title4') }}
             />
             <div className={style.home_team_block}>
-              <img src={team} alt='team' />
+              <LazyLoadImage effect='blur' alt='team' src={team} />
               <div className={style.home_team_info}>
                 <p className={style.home_team_info_title}>Для каждой</p>
                 <p className={style.home_team_info_text}>
