@@ -150,6 +150,21 @@ export const Context = ({ children }) => {
     setUser({ login: '' });
   };
 
+  const editData = async (data) => {
+    if (
+      data.login !== user.login ||
+      data.email !== user.email ||
+      data.phone !== user.phone
+    ) {
+      await axios.patch(`http://localhost:8080/users/${user.id}`, data);
+      const resp = await axios.get(`http://localhost:8080/users/${user.id}`);
+
+      localStorage.setItem('user', JSON.stringify(resp.data.login));
+      setUser(resp.data);
+    }
+    return;
+  };
+
   const value = {
     user,
     shop,
@@ -172,6 +187,7 @@ export const Context = ({ children }) => {
     setTicket,
     addOrder,
     endPrice,
+    editData,
   };
 
   return (

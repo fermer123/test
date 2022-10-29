@@ -4,7 +4,7 @@
       "email": "qwe@mail.ru",
       "password": "$2a$10$Rl4WnQSWCbRZKqGEfRDmbe4r1lnq8V2jNtzu2P9tALp0Z31UFkxLi",
       "login": "qwe",
-      "phone": "123123123",
+      "phone": "1123123qwe",
       "id": 1,
       "orders": []
     }
@@ -44,8 +44,19 @@
       "oldPrice": 84,
       "image": "img/kup.png",
       "category": "t-shirt",
-      "size": ["s", "m", "l", "xl"],
-      "color": ["#235989", "#FD9696", "#927876", "#D5D5D5", "#a095be"],
+      "size": [
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "color": [
+        "#235989",
+        "#FD9696",
+        "#927876",
+        "#D5D5D5",
+        "#a095be"
+      ],
       "inStock": 10
     },
     {
@@ -55,8 +66,18 @@
       "oldPrice": 47,
       "image": "img/kup.png",
       "category": "t-shirt",
-      "size": ["s", "m", "l", "xl"],
-      "color": ["#FD9696", "#927876", "#D5D5D5", "#a095be"],
+      "size": [
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "color": [
+        "#FD9696",
+        "#927876",
+        "#D5D5D5",
+        "#a095be"
+      ],
       "inStock": 99
     },
     {
@@ -66,8 +87,17 @@
       "oldPrice": "",
       "image": "img/kup.png",
       "category": "t-shirt",
-      "size": ["s", "m", "l", "xl"],
-      "color": ["green", " #927876", "#FDC796"],
+      "size": [
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "color": [
+        "green",
+        " #927876",
+        "#FDC796"
+      ],
       "inStock": 47
     },
     {
@@ -77,8 +107,18 @@
       "oldPrice": 555,
       "image": "img/palto.png",
       "category": "сoat",
-      "size": ["s", "m", "l", "xl"],
-      "color": ["#927876", "#FDC796", "#D5D5D5", "grey"],
+      "size": [
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "color": [
+        "#927876",
+        "#FDC796",
+        "#D5D5D5",
+        "grey"
+      ],
       "inStock": 77
     },
     {
@@ -88,8 +128,18 @@
       "oldPrice": "",
       "image": "img/palto.png",
       "category": "сoat",
-      "size": ["s", "m", "l", "xl"],
-      "color": ["#FD9696", "#927876", "#D5D5D5", "#FDC796"],
+      "size": [
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "color": [
+        "#FD9696",
+        "#927876",
+        "#D5D5D5",
+        "#FDC796"
+      ],
       "inStock": 117
     },
     {
@@ -99,8 +149,18 @@
       "oldPrice": "",
       "image": "img/palto.png",
       "category": "сoat",
-      "size": ["s", "m", "l", "xl"],
-      "color": ["grey", "#927876", "#D5D5D5", "#FDC796"],
+      "size": [
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "color": [
+        "grey",
+        "#927876",
+        "#D5D5D5",
+        "#FDC796"
+      ],
       "inStock": 82
     },
     {
@@ -110,8 +170,19 @@
       "oldPrice": 87,
       "image": "img/white.png",
       "category": "hoodie",
-      "size": ["s", "m", "l", "xl"],
-      "color": ["brown", "#FD9696", "#927876", "#D5D5D5", "#FDC796"],
+      "size": [
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "color": [
+        "brown",
+        "#FD9696",
+        "#927876",
+        "#D5D5D5",
+        "#FDC796"
+      ],
       "inStock": 94
     },
     {
@@ -121,8 +192,17 @@
       "oldPrice": "",
       "image": "img/white.png",
       "category": "hoodie",
-      "size": ["s", "m", "l", "xl"],
-      "color": ["#FD9696", "#D5D5D5", "#FDC796"],
+      "size": [
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "color": [
+        "#FD9696",
+        "#D5D5D5",
+        "#FDC796"
+      ],
       "inStock": 9
     },
     {
@@ -132,8 +212,18 @@
       "oldPrice": 674,
       "image": "img/white.png",
       "category": "hoodie",
-      "size": ["s", "m", "l", "xl"],
-      "color": ["#FD9696", "#927876", "#D5D5D5", "#FDC796"],
+      "size": [
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "color": [
+        "#FD9696",
+        "#927876",
+        "#D5D5D5",
+        "#FDC796"
+      ],
       "inStock": 63
     },
     {
@@ -143,8 +233,17 @@
       "oldPrice": "",
       "image": "img/kup.png",
       "category": "t-shirt",
-      "size": ["s", "m", "l", "xl"],
-      "color": ["#927876", "#FDC796", "blue"],
+      "size": [
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "color": [
+        "#927876",
+        "#FDC796",
+        "blue"
+      ],
       "inStock": 75
     },
     {
@@ -154,8 +253,18 @@
       "oldPrice": 47,
       "image": "img/kup.png",
       "category": "t-shirt",
-      "size": ["s", "m", "l", "xl"],
-      "color": ["#FD9696", "#927876", "#D5D5D5", "#92751"],
+      "size": [
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "color": [
+        "#FD9696",
+        "#927876",
+        "#D5D5D5",
+        "#92751"
+      ],
       "inStock": 6
     },
     {
@@ -165,8 +274,16 @@
       "oldPrice": "",
       "image": "img/kup.png",
       "category": "t-shirt",
-      "size": ["s", "m", "l", "xl"],
-      "color": ["blue", "#927876"],
+      "size": [
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "color": [
+        "blue",
+        "#927876"
+      ],
       "inStock": 39
     },
     {
@@ -176,8 +293,18 @@
       "oldPrice": 100,
       "image": "img/shirt.png",
       "category": "сoat",
-      "size": ["s", "m", "l", "xl"],
-      "color": ["#FD9696", "#927876", "#D5D5D5", "#FDC796"],
+      "size": [
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "color": [
+        "#FD9696",
+        "#927876",
+        "#D5D5D5",
+        "#FDC796"
+      ],
       "inStock": 123
     },
     {
@@ -187,8 +314,18 @@
       "oldPrice": "4",
       "image": "img/shirt.png",
       "category": "сoat",
-      "size": ["s", "m", "l", "xl"],
-      "color": ["#FD9696", "#D5D5D5", "#FDC796", "orange"],
+      "size": [
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "color": [
+        "#FD9696",
+        "#D5D5D5",
+        "#FDC796",
+        "orange"
+      ],
       "inStock": 28
     },
     {
@@ -198,8 +335,19 @@
       "oldPrice": "",
       "image": "img/shirt.png",
       "category": "hoodie",
-      "size": ["s", "m", "l", "xl"],
-      "color": ["#FD9696", "#927876", "#D5D5D5", "#FDC796", "yellow"],
+      "size": [
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "color": [
+        "#FD9696",
+        "#927876",
+        "#D5D5D5",
+        "#FDC796",
+        "yellow"
+      ],
       "inStock": 82
     },
     {
@@ -209,8 +357,16 @@
       "oldPrice": "",
       "image": "img/white.png",
       "category": "hoodie",
-      "size": ["s", "m", "l", "xl"],
-      "color": ["#927876", "#D5D5D5"],
+      "size": [
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "color": [
+        "#927876",
+        "#D5D5D5"
+      ],
       "inStock": 85
     },
     {
@@ -220,8 +376,18 @@
       "oldPrice": 68,
       "image": "img/white.png",
       "category": "sweatshirt",
-      "size": ["s", "m", "l", "xl"],
-      "color": ["#FD9696", "#927876", "#FDC796", "#6E9C9F"],
+      "size": [
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "color": [
+        "#FD9696",
+        "#927876",
+        "#FDC796",
+        "#6E9C9F"
+      ],
       "inStock": 49
     },
     {
@@ -231,8 +397,17 @@
       "oldPrice": 37,
       "image": "img/white.png",
       "category": "sweatshirt",
-      "size": ["s", "m", "l", "xl"],
-      "color": ["#927876", "#6E9C9F", "#91573"],
+      "size": [
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "color": [
+        "#927876",
+        "#6E9C9F",
+        "#91573"
+      ],
       "inStock": 56
     },
     {
@@ -242,8 +417,18 @@
       "oldPrice": "",
       "image": "img/kup.png",
       "category": "t-shirt",
-      "size": ["s", "m", "l", "xl"],
-      "color": ["#FD9681", "#927876", "#FDC796", "#91743"],
+      "size": [
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "color": [
+        "#FD9681",
+        "#927876",
+        "#FDC796",
+        "#91743"
+      ],
       "inStock": 71
     },
     {
@@ -253,8 +438,19 @@
       "oldPrice": 530,
       "image": "img/kup.png",
       "category": "t-shirt",
-      "size": ["s", "m", "l", "xl"],
-      "color": ["#e69138", "#7b996e", "#927876", "#D5D5D5", "#38761d"],
+      "size": [
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "color": [
+        "#e69138",
+        "#7b996e",
+        "#927876",
+        "#D5D5D5",
+        "#38761d"
+      ],
       "inStock": 67
     },
     {
@@ -264,8 +460,18 @@
       "oldPrice": 12,
       "image": "img/kup.png",
       "category": "t-shirt",
-      "size": ["s", "m", "l", "xl"],
-      "color": ["#FD9696", "#927876", "#FDC796", "#571247"],
+      "size": [
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "color": [
+        "#FD9696",
+        "#927876",
+        "#FDC796",
+        "#571247"
+      ],
       "inStock": 16
     },
     {
@@ -275,8 +481,18 @@
       "oldPrice": 84,
       "image": "img/kup.png",
       "category": "t-shirt",
-      "size": ["s", "m", "l", "xl"],
-      "color": ["#d192a9", "#927876", "##4b3b41", "#571247"],
+      "size": [
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "color": [
+        "#d192a9",
+        "#927876",
+        "##4b3b41",
+        "#571247"
+      ],
       "inStock": 96
     },
     {
@@ -286,8 +502,18 @@
       "oldPrice": 47,
       "image": "img/kup.png",
       "category": "t-shirt",
-      "size": ["s", "m", "l", "xl"],
-      "color": ["#d192a9", "#70bbca", "#6b3046", "#571247"],
+      "size": [
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "color": [
+        "#d192a9",
+        "#70bbca",
+        "#6b3046",
+        "#571247"
+      ],
       "inStock": 145
     },
     {
@@ -297,8 +523,18 @@
       "oldPrice": "",
       "image": "img/kup.png",
       "category": "t-shirt",
-      "size": ["s", "m", "l", "xl"],
-      "color": ["#d192a9", "#571247", "#45bfd9", "#571247"],
+      "size": [
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "color": [
+        "#d192a9",
+        "#571247",
+        "#45bfd9",
+        "#571247"
+      ],
       "inStock": 3
     },
     {
@@ -308,8 +544,19 @@
       "oldPrice": 555,
       "image": "img/palto.png",
       "category": "сoat",
-      "size": ["s", "m", "l", "xl"],
-      "color": ["#235989", "#5f797e", "#927876", "#b2d4a5", "#a095be"],
+      "size": [
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "color": [
+        "#235989",
+        "#5f797e",
+        "#927876",
+        "#b2d4a5",
+        "#a095be"
+      ],
       "inStock": 100
     },
     {
@@ -319,8 +566,19 @@
       "oldPrice": "",
       "image": "img/palto.png",
       "category": "сoat",
-      "size": ["s", "m", "l", "xl"],
-      "color": ["#b2d4a5", "#FD9696", "#927876", "#D5D5D5", "#5f797e"],
+      "size": [
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "color": [
+        "#b2d4a5",
+        "#FD9696",
+        "#927876",
+        "#D5D5D5",
+        "#5f797e"
+      ],
       "inStock": 90
     },
     {
@@ -330,8 +588,19 @@
       "oldPrice": "",
       "image": "img/palto.png",
       "category": "сoat",
-      "size": ["s", "m", "l", "xl"],
-      "color": ["#e69138", "#7b996e", "#927876", "#D5D5D5", "#38761d"],
+      "size": [
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "color": [
+        "#e69138",
+        "#7b996e",
+        "#927876",
+        "#D5D5D5",
+        "#38761d"
+      ],
       "inStock": 1
     },
     {
@@ -341,8 +610,19 @@
       "oldPrice": 87,
       "image": "img/white.png",
       "category": "hoodie",
-      "size": ["s", "m", "l", "xl"],
-      "color": ["#235989", "#FD9696", "#927876", "#D5D5D5", "#a095be"],
+      "size": [
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "color": [
+        "#235989",
+        "#FD9696",
+        "#927876",
+        "#D5D5D5",
+        "#a095be"
+      ],
       "inStock": 9
     },
     {
@@ -352,8 +632,19 @@
       "oldPrice": "",
       "image": "img/white.png",
       "category": "hoodie",
-      "size": ["s", "m", "l", "xl"],
-      "color": ["#235989", "#FD9696", "#927876", "#D5D5D5", "#a095be"],
+      "size": [
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "color": [
+        "#235989",
+        "#FD9696",
+        "#927876",
+        "#D5D5D5",
+        "#a095be"
+      ],
       "inStock": 110
     },
     {
@@ -363,8 +654,19 @@
       "oldPrice": 674,
       "image": "img/white.png",
       "category": "hoodie",
-      "size": ["s", "m", "l", "xl"],
-      "color": ["#ef8d8d", "#93c7ed", "#ddd4f7", "#D5D5D5", "#af9134"],
+      "size": [
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "color": [
+        "#ef8d8d",
+        "#93c7ed",
+        "#ddd4f7",
+        "#D5D5D5",
+        "#af9134"
+      ],
       "inStock": 19
     },
     {
@@ -374,8 +676,19 @@
       "oldPrice": "",
       "image": "img/kup.png",
       "category": "t-shirt",
-      "size": ["s", "m", "l", "xl"],
-      "color": ["#235989", "#FD9696", "#927876", "#D5D5D5", "#a095be"],
+      "size": [
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "color": [
+        "#235989",
+        "#FD9696",
+        "#927876",
+        "#D5D5D5",
+        "#a095be"
+      ],
       "inStock": 21
     },
     {
@@ -385,8 +698,19 @@
       "oldPrice": 47,
       "image": "img/kup.png",
       "category": "t-shirt",
-      "size": ["s", "m", "l", "xl"],
-      "color": ["#e69138", "#7b996e", "#927876", "#D5D5D5", "#38761d"],
+      "size": [
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "color": [
+        "#e69138",
+        "#7b996e",
+        "#927876",
+        "#D5D5D5",
+        "#38761d"
+      ],
       "inStock": 65
     },
     {
@@ -396,8 +720,19 @@
       "oldPrice": "",
       "image": "img/kup.png",
       "category": "sweatshirt",
-      "size": ["s", "m", "l", "xl"],
-      "color": ["#235989", "#FD9696", "#927876", "#D5D5D5", "#a095be"],
+      "size": [
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "color": [
+        "#235989",
+        "#FD9696",
+        "#927876",
+        "#D5D5D5",
+        "#a095be"
+      ],
       "inStock": 91
     },
     {
@@ -407,8 +742,19 @@
       "oldPrice": 100,
       "image": "img/shirt.png",
       "category": "сoat",
-      "size": ["s", "m", "l", "xl"],
-      "color": ["#97854f", "#7b996e", "#927876", "#c27ba0", "#38761d"],
+      "size": [
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "color": [
+        "#97854f",
+        "#7b996e",
+        "#927876",
+        "#c27ba0",
+        "#38761d"
+      ],
       "inStock": 38
     },
     {
@@ -418,8 +764,19 @@
       "oldPrice": "4",
       "image": "img/shirt.png",
       "category": "сoat",
-      "size": ["s", "m", "l", "xl"],
-      "color": ["#e69138", "#7b996e", "#927876", "#D5D5D5", "#38761d"],
+      "size": [
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "color": [
+        "#e69138",
+        "#7b996e",
+        "#927876",
+        "#D5D5D5",
+        "#38761d"
+      ],
       "inStock": 44
     },
     {
@@ -429,8 +786,19 @@
       "oldPrice": "",
       "image": "img/shirt.png",
       "category": "hoodie",
-      "size": ["s", "m", "l", "xl"],
-      "color": ["#235989", "#FD9696", "#927876", "#D5D5D5", "#a095be"],
+      "size": [
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "color": [
+        "#235989",
+        "#FD9696",
+        "#927876",
+        "#D5D5D5",
+        "#a095be"
+      ],
       "inStock": 69
     },
     {
@@ -440,8 +808,19 @@
       "oldPrice": "",
       "image": "img/white.png",
       "category": "hoodie",
-      "size": ["s", "m", "l", "xl"],
-      "color": ["#235989", "#FD9696", "#927876", "#D5D5D5", "#a095be"],
+      "size": [
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "color": [
+        "#235989",
+        "#FD9696",
+        "#927876",
+        "#D5D5D5",
+        "#a095be"
+      ],
       "inStock": 76
     },
     {
@@ -451,8 +830,19 @@
       "oldPrice": 68,
       "image": "img/white.png",
       "category": "sweatshirt",
-      "size": ["s", "m", "l", "xl"],
-      "color": ["#ef8d8d", "#93c7ed", "#ddd4f7", "#D5D5D5", "#af9134"],
+      "size": [
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "color": [
+        "#ef8d8d",
+        "#93c7ed",
+        "#ddd4f7",
+        "#D5D5D5",
+        "#af9134"
+      ],
       "inStock": 87
     },
     {
@@ -462,8 +852,19 @@
       "oldPrice": 37,
       "image": "img/white.png",
       "category": "sweatshirt",
-      "size": ["s", "m", "l", "xl"],
-      "color": ["#235989", "#FD9696", "#927876", "#D5D5D5", "#a095be"],
+      "size": [
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "color": [
+        "#235989",
+        "#FD9696",
+        "#927876",
+        "#D5D5D5",
+        "#a095be"
+      ],
       "inStock": 98
     },
     {
@@ -473,8 +874,19 @@
       "oldPrice": "",
       "image": "img/kup.png",
       "category": "t-shirt",
-      "size": ["s", "m", "l", "xl"],
-      "color": ["#e69138", "#7b996e", "#927876", "#D5D5D5", "#38761d"],
+      "size": [
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "color": [
+        "#e69138",
+        "#7b996e",
+        "#927876",
+        "#D5D5D5",
+        "#38761d"
+      ],
       "inStock": 54
     },
     {
@@ -484,8 +896,17 @@
       "oldPrice": 530,
       "image": "img/kup.png",
       "category": "sweatshirt",
-      "size": ["s", "m", "l", "xl"],
-      "color": ["#FD9696", "#927876", "#D5D5D5"],
+      "size": [
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "color": [
+        "#FD9696",
+        "#927876",
+        "#D5D5D5"
+      ],
       "inStock": 31
     },
     {
@@ -495,8 +916,19 @@
       "oldPrice": 12,
       "image": "img/kup.png",
       "category": "t-shirt",
-      "size": ["s", "m", "l", "xl"],
-      "color": ["#ef8d8d", "#93c7ed", "#ddd4f7", "#D5D5D5", "#af9134"],
+      "size": [
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "color": [
+        "#ef8d8d",
+        "#93c7ed",
+        "#ddd4f7",
+        "#D5D5D5",
+        "#af9134"
+      ],
       "inStock": 29
     },
     {
@@ -506,8 +938,18 @@
       "oldPrice": "",
       "image": "img/white.png",
       "category": "sweatshirt",
-      "size": ["s", "m", "l", "xl"],
-      "color": ["#78b1be", "#FD9696", "#927876", "#D5D5D5"],
+      "size": [
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "color": [
+        "#78b1be",
+        "#FD9696",
+        "#927876",
+        "#D5D5D5"
+      ],
       "inStock": 16
     },
     {
@@ -517,8 +959,15 @@
       "oldPrice": "",
       "image": "img/white.png",
       "category": "sweatshirt",
-      "size": ["s", "m", "l"],
-      "color": ["#927876", "#D5D5D5"],
+      "size": [
+        "s",
+        "m",
+        "l"
+      ],
+      "color": [
+        "#927876",
+        "#D5D5D5"
+      ],
       "inStock": 12
     }
   ]

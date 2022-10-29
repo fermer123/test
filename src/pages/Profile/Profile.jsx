@@ -5,8 +5,9 @@ import { useNavigate } from 'react-router-dom';
 import { CustomContext } from '../../Context';
 import style from './Profile.module.scss';
 import { useInput } from '../../components/input/input';
+
 const Profile = () => {
-  const { user, Logout } = useContext(CustomContext);
+  const { user, Logout, editData } = useContext(CustomContext);
   const { t } = useTranslation();
   const push = useNavigate();
   const [edit, setEdit] = useState(false);
@@ -48,8 +49,18 @@ const Profile = () => {
           </div>
         </div>
         <div className={style.btn}>
-          <button onClick={() => setEdit(!edit)} className={style.btn_item}>
-            {edit ? 'Сохранить' : 'Редактирвать'}
+          <button
+            onClick={() => {
+              editData({
+                login: login.value,
+                phone: phone.value,
+                email: email.value,
+              });
+              setEdit(!edit);
+            }}
+            className={style.btn_item}
+          >
+            {edit ? 'Сохранить' : 'Редактировать'}
           </button>
           {edit ? null : (
             <button
