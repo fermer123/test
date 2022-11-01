@@ -129,16 +129,15 @@ export const Context = ({ children }) => {
   };
 
   const Register = async (data) => {
-    const resp = await axios.post('http://localhost:8080/register', {
-      ...data,
-    });
+    console.log(data);
+    const resp = await axios.post('http://localhost:8080/register', data);
     setUser(resp.data.user);
     localStorage.setItem('user', JSON.stringify(resp.data.user));
     push('/');
   };
 
   const Login = async (data) => {
-    const resp = await axios.post('http://localhost:8080/login', { ...data });
+    const resp = await axios.post('http://localhost:8080/login', data);
     localStorage.setItem('user', JSON.stringify(resp.data.user));
     setUser(resp.data.user);
     push('/');
@@ -157,10 +156,15 @@ export const Context = ({ children }) => {
       data.phone !== user.phone
     ) {
       await axios.patch(`http://localhost:8080/users/${user.id}`, data);
-      const resp = await axios.get(`http://localhost:8080/users/${user.id}`);
-
-      localStorage.setItem('user', JSON.stringify(resp.data.login));
-      setUser(resp.data);
+      await axios.get(`http://localhost:8080/users/${user.id}`);
+      setUser({
+        ...user,
+        login: data.login,
+        email: data.email,
+        phone: data.phone,
+      });
+      console.log(user);
+      localStorage.setItem('user', JSON.stringify(user));
     }
     return;
   };
