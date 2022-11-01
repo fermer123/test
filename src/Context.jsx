@@ -155,16 +155,13 @@ export const Context = ({ children }) => {
       data.email !== user.email ||
       data.phone !== user.phone
     ) {
-      await axios.patch(`http://localhost:8080/users/${user.id}`, data);
-      await axios.get(`http://localhost:8080/users/${user.id}`);
-      setUser({
-        ...user,
-        login: data.login,
-        email: data.email,
-        phone: data.phone,
-      });
-      console.log(user);
-      localStorage.setItem('user', JSON.stringify(user));
+      const resp = await axios.patch(
+        `http://localhost:8080/users/${user.id}`,
+        data,
+      );
+      setUser(resp.data);
+
+      localStorage.setItem('user', JSON.stringify(resp.data));
     }
     return;
   };
