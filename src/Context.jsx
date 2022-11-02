@@ -129,7 +129,6 @@ export const Context = ({ children }) => {
   };
 
   const Register = async (data) => {
-    console.log(data);
     const resp = await axios.post('http://localhost:8080/register', data);
     setUser(resp.data.user);
     localStorage.setItem('user', JSON.stringify(resp.data.user));

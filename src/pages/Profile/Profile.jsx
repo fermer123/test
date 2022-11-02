@@ -14,6 +14,8 @@ const Profile = () => {
   const login = useInput(user.login);
   const phone = useInput(user.phone);
   const email = useInput(user.email);
+  const password = useInput('');
+  const repeatPassword = useInput('');
 
   return (
     <div className='container'>
@@ -31,16 +33,16 @@ const Profile = () => {
               <div>{user.login}</div>
             )}
           </div>
-          <div className={style.telephone}>
-            <div className={style.telephone1}>Телефон</div>
+          <div className={style.name}>
+            <div className={style.name1}>Телефон</div>
             {edit ? (
               <input className={style.input} {...phone} />
             ) : (
               <div>{user.phone}</div>
             )}
           </div>
-          <div className={style.email}>
-            <div className={style.email1}>Email</div>
+          <div className={style.name}>
+            <div className={style.name1}>Email</div>
             {edit ? (
               <input className={style.input} {...email} />
             ) : (
@@ -48,6 +50,31 @@ const Profile = () => {
             )}
           </div>
         </div>
+        <div className={style.pass}>
+          {edit ? (
+            <div className={style.name}>
+              <div className={style.name1}>Введите новый пароль</div>
+              <input
+                placeholder='Введите новый пароль'
+                type='password'
+                className={style.input}
+                {...password}
+              />
+            </div>
+          ) : null}
+          {edit ? (
+            <div className={style.name}>
+              <div className={style.name1}>Повторите пароль</div>
+              <input
+                placeholder='Повторите пароль'
+                type='password'
+                className={style.input}
+                {...repeatPassword}
+              />
+            </div>
+          ) : null}
+        </div>
+
         <div className={style.btn}>
           <button
             onClick={() => {
