@@ -16,6 +16,22 @@ const Profile = () => {
   const email = useInput(user.email);
   const password = useInput('');
   const repeatPassword = useInput('');
+  const data = {
+    login: login.value,
+    phone: phone.value,
+    email: email.value,
+    password: password.value,
+  };
+
+  const passwordValidate = (obj) => {
+    if (obj.password.length > 4) {
+      return obj;
+    } else {
+      delete obj.password;
+      return obj;
+    }
+    //доделать нормально валидацию
+  };
 
   return (
     <div className='container'>
@@ -78,11 +94,9 @@ const Profile = () => {
         <div className={style.btn}>
           <button
             onClick={() => {
-              editData({
-                login: login.value,
-                phone: phone.value,
-                email: email.value,
-              });
+              password.length > 4
+                ? editData(data)
+                : editData(passwordValidate(data));
               setEdit(!edit);
             }}
             className={style.btn_item}
